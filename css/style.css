@@ -80,6 +80,12 @@ header,
   top: 72%;
 }
 
+#fleche {
+  position: absolute;
+  top: 450px;
+  left: 49%;
+}
+
 /*-------------------------------------------------------------------------------------
   # SECTION CHAPITRE
   -------------------------------------------------------------------------------------*/
@@ -196,9 +202,9 @@ section {
   background-repeat: no-repeat;
   background-size: contain;
   width: 50%;
-  position: relative;
-  top: 74%;
-  left: 50%;
+  height: 100%;
+  position: absolute;
+  bottom: 100%;
 }
 /*-------------------------------------------------------------------------------------
   # SECTION FOOTER
