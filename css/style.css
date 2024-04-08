@@ -97,7 +97,6 @@ section {
   border: 1px red solid;
 }
 
-
 .debut {
   position: relative;
   top: 20%;
@@ -235,6 +234,49 @@ section {
   height: 100%;
   position: absolute;
   bottom: 100%;
+}
+
+#ghost {
+  background-image: url(../assets/img/img_personnages/spritesheet_fantome.png);
+  width: 500px;
+  height: 462px;
+  animation-name: ghost;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(50);
+}
+
+@keyframes ghost {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -25100px 0;
+  }
+}
+
+#fille {
+  background-image: url(../assets/img/img_personnages/spritesheet_fille.png);
+  width: 400px;
+  height: 680px;
+  animation-name: fille;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(4);
+}
+
+@keyframes fille {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1546px 0;
+  }
+}
+
+.sprite {
+  width: 100%;
+  height: 500vh;
 }
 
 /*-------------------------------------------------------------------------------------
