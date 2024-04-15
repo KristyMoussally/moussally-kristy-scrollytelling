@@ -1,9 +1,3 @@
-document.addEventListener("DOMContentLoaded", (event) => {
-  gsap.registerPlugin(ScrollTrigger);
-});
-
-GSDevTools.create();
-
 gsap.fromTo(".fleche", { y: 10 }, { y: 30, repeat: -1, yoyo: true });
 
 let animYeux = document.querySelector(".debut");
@@ -15,7 +9,13 @@ window.addEventListener("scroll", () => {
     animGhost.style.animationPlayState = "paused";
     document.querySelector("body").classList.remove("is-scrolling");
   }, 100);
-  animYeux.style.animationPlayState = "running";
-  animGhost.style.animationPlayState = "running";
   document.querySelector("body").classList.add("is-scrolling");
 });
+
+/*
+document.addEventListener("DOMContentLoaded", (event) => {
+  gsap.registerPlugin(ScrollTrigger);
+});
+
+GSDevTools.create();
+*/
