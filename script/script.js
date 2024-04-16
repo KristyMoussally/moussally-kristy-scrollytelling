@@ -10,6 +10,8 @@ window.addEventListener("scroll", () => {
     document.querySelector("body").classList.remove("is-scrolling");
   }, 100);
   document.querySelector("body").classList.add("is-scrolling");
+  animYeux.style.animationPlayState = "running";
+  animGhost.style.animationPlayState = "running";
 });
 
 /*
