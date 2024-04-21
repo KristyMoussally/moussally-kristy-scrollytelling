@@ -78,12 +78,12 @@ header,
   text-align: center;
   color: var(--white);
   position: relative;
-  top: 72%;
+  top: 70%;
 }
 
 #fleche {
   position: absolute;
-  top: 450px;
+  top: 50vh;
   left: 49%;
 }
 
@@ -95,27 +95,34 @@ section {
   width: 100%;
   height: 100%;
   border: 1px red solid;
+  position: relative;
 }
 
+.is-scrolling {
+  animation-play-state: running;
+}
+
+/*-------------------------------------------------------------------------------------
+  # CHAPITRE 1
+  -------------------------------------------------------------------------------------*/
+
 #chp01 {
-  background-image: radial-gradient(var(--white), 45%, var(--black));
+  background-image: linear-gradient(var(--white), 30%, var(--black));
   background-size: 100%;
 }
 
 .debut {
-  position: relative;
-  top: 20%;
-  left: 25vmin;
+  position: absolute;
+  top: 10%;
+  left: 35%;
   background-image: url(../assets/img/img_personnages/spritesheet_yeux_griboulli.png);
   background-repeat: no-repeat;
-  width: 425px;
-  height: 300vh;
+  background-size: 5000% 100%;
   animation-name: yeux;
   animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-timing-function: steps(50);
   animation-play-state: paused;
-  background-size: -5000% 0;
 }
 
 @keyframes yeux {
@@ -127,9 +134,49 @@ section {
   }
 }
 
-.is-scrolling {
-  animation-play-state: running;
+#ghost {
+  background-image: url(../assets/img/img_personnages/spritesheet_fantome.png);
+  width: 50%;
+  height: 100vh;
+  position: absolute;
+  top: 10%;
+  left: 35%;
+  animation-name: ghost;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(50);
 }
+
+@keyframes ghost {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -25100px 0;
+  }
+}
+
+.yeux-fille-ferme {
+  position: absolute;
+  width: 100%;
+}
+
+.yeux-fille-ouvert {
+  position: absolute;
+  width: 100%;
+}
+.goutte {
+  position: relative;
+  width: 50%;
+}
+
+.g1 {
+  left: 50%;
+}
+
+/*-------------------------------------------------------------------------------------
+  # CHAPITRE 2
+  -------------------------------------------------------------------------------------*/
 
 #chp02,
 #chp03,
@@ -169,6 +216,13 @@ section {
   background-repeat: no-repeat;
 }
 
+#background-porte {
+  background-image: url(../assets/img/img_arriere_plan/arriere_plan_porte.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
 #chp04,
 #chp05,
 #chp06 {
@@ -244,25 +298,6 @@ section {
   height: 100%;
   position: absolute;
   bottom: 100%;
-}
-
-#ghost {
-  background-image: url(../assets/img/img_personnages/spritesheet_fantome.png);
-  width: 500px;
-  height: 462px;
-  animation-name: ghost;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-timing-function: steps(50);
-}
-
-@keyframes ghost {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -25100px 0;
-  }
 }
 
 #fille {
