@@ -184,14 +184,16 @@ section {
 
 .yeux-fille-ferme {
   position: absolute;
-  width: 100%;
-  bottom: 20%;
+  max-width: 50%;
+  bottom: 20vh;
+  left: 20%;
 }
 
 .yeux-fille-ouvert {
   position: absolute;
-  width: 100%;
-  bottom: 20%;
+  max-width: 50vw;
+  bottom: 20vh;
+  left: 20%;
 }
 .goutte {
   position: absolute;
