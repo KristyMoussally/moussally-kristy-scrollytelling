@@ -136,7 +136,7 @@ section {
   background-size: 200%;
 }
 
-  /*change opacity (change scene) with gsap*/
+/*change opacity (change scene) with gsap*/
 .debut {
   position: absolute;
   aspect-ratio: 1/1;
@@ -159,7 +159,7 @@ section {
   }
 }
 
-  /*change opacity (change scene) with gsap*/
+/*change opacity (change scene) with gsap*/
 #ghost {
   position: absolute;
   aspect-ratio: 1/1;
@@ -184,7 +184,7 @@ section {
   }
 }
 
-  /*change opacity (change scene) with gsap*/
+/*change opacity (change scene) with gsap*/
 .yeux-fille-ferme {
   position: absolute;
   max-width: 50%;
@@ -192,7 +192,7 @@ section {
   left: 25%;
 }
 
-  /*change opacity (change scene) with gsap*/
+/*change opacity (change scene) with gsap*/
 .yeux-fille-ouvert {
   position: absolute;
   max-width: 50vw;
@@ -229,10 +229,9 @@ section {
   height: 100%;
   background-position: 20% 50%;
   background-repeat: no-repeat;
-
 }
 
-  /*change opacity (change scene) with gsap*/
+/*change opacity (change scene) with gsap*/
 .fille-coucher {
   position: absolute;
   min-width: 20vmin;
@@ -253,20 +252,20 @@ section {
   # CHAPITRE 3
   -------------------------------------------------------------------------------------*/
 
-  /*change opacity (change scene) with gsap*/
+/*change opacity (change scene) with gsap*/
 .wagon-coin {
   display: none;
   background-image: url(../assets/img/img_arriere_plan/wagon_coin.png);
   background-size: cover;
   height: 100%;
-  background-position: 20% ;
+  background-position: 20%;
   background-repeat: no-repeat;
 }
 
-.regard-droit{
+.regard-droit {
   position: absolute;
   max-width: 70vmax;
-  top:0;
+  top: 0;
   left: 0;
 }
 
@@ -274,15 +273,15 @@ section {
   background-image: url(../assets/img/img_arriere_plan/arriere_plan_porte.jpg);
   background-size: cover;
   height: 100%;
-  background-position: 20% ;
+  background-position: 20%;
   background-repeat: no-repeat;
 }
 
-.ghost-porte{
+.ghost-porte {
   position: absolute;
-  max-width: 70vmax;
-  top:0;
-  left: 35%;
+  width: 30%;
+  left: 30%;
+  bottom: 0;
 }
 
 .porte {
@@ -291,68 +290,76 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
-  background-position: 50% 100% ;
+  background-position: 50% 100%;
   z-index: 1;
   top: -100vh;
 }
 
-.bruitage{
+.bruitage {
   position: absolute;
   max-width: 20vmax;
-
 }
 
-.bam-1{
-  top:0%;
-  left:0%;
+.bam-1 {
+  top: 0%;
+  left: 0%;
 }
 
-.bam-2{
-  bottom:0;
-  right:20%;
+.bam-2 {
+  bottom: 0;
+  right: 10%;
 }
 
-.thud-1{
-  top:45%;
-  left:0;
+.thud-1 {
+  top: 45%;
+  left: 0;
 }
 
-.thud-2{
-  top:0;
-  right:0;
+.thud-2 {
+  top: 0;
+  right: 0;
 }
 
-
-.regard-gauche{
+.regard-gauche {
   position: absolute;
   max-width: 70vmax;
-  top:0;
+  top: 0;
   left: 0;
+}
+
+.bras-fille {
+  position: absolute;
+  width: 30%;
+  left: 30%;
+  bottom: 0;
+  z-index: 1;
 }
 
 /*-------------------------------------------------------------------------------------
   # CHAPITRE 4-6 fond
   -------------------------------------------------------------------------------------*/
 
-#chp04,#chp05,#chp06 {
+#chp04,
+#chp05,
+#chp06 {
   background-image: url(../assets/img/img_arriere_plan/arriere_plan_tombee.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  background-position: 50% ;
+  background-position: 50%;
 }
 
-.tomber{
+.tomber {
   position: absolute;
   max-width: 30vmax;
-  top:0;
+  top: 0;
   right: 40%;
 }
 
-.paper{
+.paper {
   position: absolute;
   width: 100%;
-  top:0;
+  top: 0;
   right: 0%;
 }
 
@@ -364,8 +371,50 @@ section {
   background-image: url(../assets/img/img_arriere_plan/wagon_chambre_enfance.png);
   background-size: cover;
   height: 100%;
-  background-position: 20% ;
+  background-position: 20%;
   background-repeat: no-repeat;
+}
+
+.peluche {
+  position: absolute;
+  width: 5%;
+  bottom: 10%;
+  right: 35%;
+}
+
+.cube {
+  position: absolute;
+  width: 5%;
+  top: 20%;
+  left: 20%;
+}
+
+.fille-joue-block {
+  position: absolute;
+  width: 30%;
+  bottom: 0;
+  right: 0%;
+}
+
+.fille-joue-peluche {
+  position: absolute;
+  width: 30%;
+  bottom: 0;
+  left: 0%;
+}
+
+.fille-curieuse {
+  position: absolute;
+  width: 30%;
+  bottom: 20%;
+  right: 10%;
+}
+
+.mere-assise {
+  position: absolute;
+  width: 40%;
+  bottom: 0;
+  left: 30%;
 }
 
 /*-------------------------------------------------------------------------------------
@@ -376,7 +425,7 @@ section {
   background-image: url(../assets/img/img_arriere_plan/wagon_ecole.png);
   background-size: cover;
   height: 100%;
-  background-position: 20% ;
+  background-position: 20%;
   background-repeat: no-repeat;
 }
 
@@ -388,7 +437,7 @@ section {
   background-image: url(../assets/img/img_arriere_plan/wagon_aquarium.png);
   background-size: cover;
   height: 100%;
-  background-position: 20% ;
+  background-position: 20%;
   background-repeat: no-repeat;
 }
 
@@ -401,7 +450,7 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
-  background-position: 20% ;
+  background-position: 20%;
 }
 
 .porte {
@@ -409,7 +458,7 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
-  background-position: 20% ;
+  background-position: 20%;
   position: relative;
   left: 15%;
 }
@@ -434,7 +483,7 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  background-position: 20% ;
+  background-position: 20%;
 }
 
 .gazon {
