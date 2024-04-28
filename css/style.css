@@ -58,6 +58,20 @@ h1 {
   color: var(--lightgrey);
 }
 
+span {
+  position: absolute;
+  text-align: center;
+  font-size: 3vw;
+  font-family: var(--handy);
+}
+
+.text {
+  position: absolute;
+  text-align: center;
+  font-size: 3vw;
+  font-family: var(--handy);
+}
+
 ul.technique-gsap {
   background: rgba(0, 0, 0, 0.3);
   color: white;
@@ -152,6 +166,12 @@ section {
   # CHAPITRE 1
   -------------------------------------------------------------------------------------*/
 
+.chp01 {
+  color: var(--dark);
+  left: 0;
+  right: 0;
+}
+
 #chp01 {
   background-image: linear-gradient(var(--white), 30%, var(--black));
   background-size: 200%;
@@ -161,6 +181,8 @@ section {
 .debut {
   position: absolute;
   aspect-ratio: 1/1;
+  bottom: 20%;
+  left: 35%;
   background-image: url(../assets/img/img_personnages/spritesheet_yeux_griboulli.png);
   background-repeat: no-repeat;
   background-size: 23100px 100%;
@@ -182,6 +204,7 @@ section {
 
 /*change opacity (change scene) with gsap*/
 #ghost {
+  opacity: 0;
   position: absolute;
   aspect-ratio: 1/1;
   width: 35%;
@@ -207,6 +230,7 @@ section {
 
 /*change opacity (change scene) with gsap*/
 .yeux-fille-ferme {
+  opacity: 0;
   position: absolute;
   max-width: 50%;
   bottom: 20vh;
@@ -215,12 +239,14 @@ section {
 
 /*change opacity (change scene) with gsap*/
 .yeux-fille-ouvert {
+  opacity: 0;
   position: absolute;
   max-width: 50vw;
   bottom: 20vh;
   left: 25%;
 }
 .goutte {
+  opacity: 0;
   position: absolute;
   width: 10%;
 }
@@ -244,6 +270,12 @@ section {
   # CHAPITRE 2
   -------------------------------------------------------------------------------------*/
 
+.chp02 {
+  color: var(--white);
+  left: 0;
+  right: 0;
+}
+
 .wagon-debut {
   background-image: url(../assets/img/img_arriere_plan/wagon.png);
   background-size: cover;
@@ -262,6 +294,7 @@ section {
 }
 
 .fille-debout {
+  opacity: 0;
   position: absolute;
   min-width: 20vmin;
   max-width: 30vmax;
@@ -273,9 +306,13 @@ section {
   # CHAPITRE 3
   -------------------------------------------------------------------------------------*/
 
+.chp03 {
+  color: var(--white);
+  left: 0;
+  right: 0;
+}
 /*change opacity (change scene) with gsap*/
 .wagon-coin {
-  display: none;
   background-image: url(../assets/img/img_arriere_plan/wagon_coin.png);
   background-size: cover;
   height: 100%;
@@ -291,6 +328,7 @@ section {
 }
 
 .porte-fond {
+  opacity: 0;
   background-image: url(../assets/img/img_arriere_plan/arriere_plan_porte.jpg);
   background-size: cover;
   height: 100%;
@@ -299,6 +337,7 @@ section {
 }
 
 .ghost-porte {
+  opacity: 0;
   position: absolute;
   width: 30%;
   left: 30%;
@@ -306,6 +345,7 @@ section {
 }
 
 .porte {
+  opacity: 0;
   background-image: url(../assets/img/img_elements_visuels/porte.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -318,6 +358,7 @@ section {
 }
 
 .bruitage {
+  opacity: 0;
   position: absolute;
   max-width: 20vmax;
 }
@@ -343,6 +384,7 @@ section {
 }
 
 .regard-gauche {
+  opacity: 0;
   position: absolute;
   max-width: 70vmax;
   top: 0;
@@ -350,6 +392,7 @@ section {
 }
 
 .bras-fille {
+  opacity: 0;
   position: absolute;
   width: 30%;
   left: 30%;
@@ -402,6 +445,12 @@ section {
   # CHAPITRE 4 (4-5)
   -------------------------------------------------------------------------------------*/
 
+.chp04 {
+  color: var(--white);
+  top: 50%;
+  right: 20%;
+}
+
 .paper {
   position: absolute;
   width: 100%;
@@ -439,6 +488,7 @@ section {
 }
 
 .fille-joue-block {
+  opacity: 0;
   position: absolute;
   width: 30%;
   bottom: 0;
@@ -446,6 +496,7 @@ section {
 }
 
 .fille-joue-peluche {
+  opacity: 0;
   position: absolute;
   width: 30%;
   bottom: 0;
@@ -453,6 +504,7 @@ section {
 }
 
 .fille-curieuse {
+  opacity: 0;
   position: absolute;
   width: 30%;
   bottom: 20%;
@@ -460,6 +512,7 @@ section {
 }
 
 .mere-assise {
+  opacity: 0;
   position: absolute;
   width: 40%;
   bottom: 0;
@@ -469,6 +522,12 @@ section {
 /*-------------------------------------------------------------------------------------
   # CHAPITRE 4-5
   -------------------------------------------------------------------------------------*/
+
+.chp04-5 {
+  color: var(--white);
+  left: 0;
+  right: 0%;
+}
 
 .train-tombe {
   position: absolute;
@@ -517,6 +576,18 @@ section {
   # CHAPITRE 5 (5-5)
   -------------------------------------------------------------------------------------*/
 
+.chp05 {
+  color: var(--white);
+  top: 50%;
+  right: 20%;
+}
+
+.chp05-5 {
+  color: var(--white);
+  right: 0;
+  left: 0;
+}
+
 .wagon-ecole {
   background-image: url(../assets/img/img_arriere_plan/wagon_ecole.png);
   background-size: cover;
@@ -526,6 +597,7 @@ section {
 }
 
 .fille-chante {
+  opacity: 0;
   position: absolute;
   width: 30%;
   bottom: 0%;
@@ -533,6 +605,7 @@ section {
 }
 
 .mere-lit {
+  opacity: 0;
   position: absolute;
   width: 25%;
   bottom: 0%;
@@ -540,6 +613,7 @@ section {
 }
 
 .fille-livre {
+  opacity: 0;
   position: absolute;
   width: 15%;
   bottom: 0%;
@@ -547,6 +621,7 @@ section {
 }
 
 .fille-devoir {
+  opacity: 0;
   position: absolute;
   width: 30%;
   bottom: 10%;
@@ -563,6 +638,12 @@ section {
 /*-------------------------------------------------------------------------------------
   # CHAPITRE 6
   -------------------------------------------------------------------------------------*/
+
+.chp06 {
+  color: var(--white);
+  left: 0;
+  right: 0;
+}
 
 #chp06 {
   background-image: url(../assets/img/img_arriere_plan/arriere_plan_porte.jpg);
@@ -592,11 +673,18 @@ section {
   # CHAPITRE 7
   -------------------------------------------------------------------------------------*/
 
+.chp07 {
+  color: var(--white);
+  left: 0;
+  right: 0;
+}
+
 #chp07 {
   background-image: linear-gradient(var(--darkgrey), 20%, var(--white));
 }
 
 #ghost-big {
+  opacity: 0;
   position: absolute;
   aspect-ratio: 1/1;
   width: 40%;
@@ -638,23 +726,21 @@ section {
   # CHAPITRE 8
   -------------------------------------------------------------------------------------*/
 
-#chp08 {
-  background-image: url(../assets/img/img_personnages/yeux_ouvert.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 50% 0;
+.chp08 {
+  color: var(--dark);
+  left: 0;
+  right: 0;
 }
 
-#yeux-fille-ouvert {
-  background-image: url(../assets/img/img_personnages/yeux_ouvert.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 0;
+.yeux-fille-ouvert-fin {
   position: absolute;
-  top: 0;
+  max-width: 50vw;
+  bottom: 20vh;
+  left: 25%;
 }
 
 .mere-dos {
+  opacity: 0;
   position: absolute;
   width: 80%;
   bottom: 0;
@@ -662,6 +748,7 @@ section {
 }
 
 .bras-fille-fin {
+  opacity: 0;
   position: absolute;
   width: 80%;
   z-index: 1;
@@ -669,12 +756,14 @@ section {
 }
 
 .bras-mere {
+  opacity: 0;
   position: absolute;
   width: 80%;
   right: 0;
 }
 
 .derniere-visite {
+  opacity: 0;
   position: absolute;
   width: 80%;
   bottom: 0;
@@ -694,6 +783,12 @@ section {
 /*-------------------------------------------------------------------------------------
   # CHAPITRE 9
   -------------------------------------------------------------------------------------*/
+
+.chp09 {
+  color: var(--dark);
+  left: 0;
+  right: 0;
+}
 
 #chp09 {
   background-image: url(../assets/img/img_arriere_plan/nuage.jpg);
