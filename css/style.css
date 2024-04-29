@@ -180,7 +180,7 @@ section {
 /*change opacity (change scene) with gsap*/
 .debut {
   position: absolute;
-  aspect-ratio: 1/1;
+  aspect-ratio: 450/462;
   bottom: 20%;
   left: 35%;
   background-image: url(../assets/img/img_personnages/spritesheet_yeux_griboulli.png);
@@ -422,10 +422,11 @@ section {
 
 #fille-cours {
   position: absolute;
-  aspect-ratio: 1/1;
-  top: 0;
+  aspect-ratio: 640/900;
+  bottom: 0;
   background-image: url(../assets/img/img_personnages/spritesheet_fille.png);
-  background-size: 1546px 100%;
+  background-size: 410%;
+  width: 18%;
   animation-name: fille;
   animation-duration: 1s;
   animation-iteration-count: infinite;
@@ -437,7 +438,7 @@ section {
     background-position: 0 0;
   }
   to {
-    background-position: -1546px 0;
+    background-position: -400% 0;
   }
 }
 
@@ -534,7 +535,6 @@ section {
   width: 10%;
   right: 30%;
   top: 20%;
-  rotate: z -40deg;
 }
 
 .peluche-tombe {
@@ -822,6 +822,7 @@ section {
   -------------------------------------------------------------------------------------*/
 
 #fille {
+  aspect-ratio: 640/900;
   background-image: url(../assets/img/img_personnages/spritesheet_fille.png);
   background-position: 400%;
   background-size: cover;

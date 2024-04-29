@@ -149,6 +149,357 @@ gsap.fromTo(
   { skewX: "15%", repeat: -1, yoyo: true, y: "10%", duration: 2 }
 );
 
+gsap
+  .timeline()
+  .fromTo(
+    ".fille-joue-block ",
+    { opacity: 0 },
+    { opacity: "100%", duration: 1 }
+  )
+  .to(
+    ".fille-joue-block ",
+    {
+      opacity: "50%",
+      repeat: -1,
+      ease: "power1",
+      yoyo: true,
+      duration: 2,
+    },
+    "<0"
+  )
+  .fromTo(
+    ".fille-joue-peluche ",
+    { opacity: 0 },
+    { opacity: "100%", duration: 1 }
+  )
+  .to(
+    ".fille-joue-peluche ",
+    {
+      opacity: "50%",
+      repeat: -1,
+      ease: "power1",
+      yoyo: true,
+      duration: 2,
+    },
+    "<1"
+  )
+  .fromTo(".fille-curieuse", { opacity: 0 }, { opacity: "100%", duration: 1 })
+  .to(
+    ".fille-curieuse ",
+    {
+      opacity: "50%",
+      repeat: -1,
+      ease: "power1",
+      yoyo: true,
+      duration: 2,
+    },
+    "<0"
+  )
+  .fromTo(
+    ".fille-curieuse ",
+    { y: "10%" },
+    {
+      y: 0,
+      yoyo: true,
+      repeat: -1,
+      ease: "power1",
+      duration: 2,
+    },
+    "<0"
+  )
+  .fromTo(".mere-assise", { opacity: 0 }, { opacity: "100%", duration: 1 })
+  .to(
+    ".fille-curieuse ",
+    {
+      opacity: 0,
+      duration: 2,
+      display: "none",
+    },
+    10
+  )
+  .to(
+    ".fille-joue-block",
+    {
+      opacity: 0,
+      duration: 2,
+      display: "none",
+    },
+    10
+  )
+  .to(
+    ".fille-joue-peluche",
+    {
+      opacity: 0,
+      display: "none",
+      duration: 2,
+    },
+    10
+  )
+  .to(
+    ".mere-assise",
+    {
+      opacity: 0,
+      display: "none",
+      duration: 2,
+    },
+    10
+  )
+  .fromTo(
+    "#fille-cours",
+    { opacity: 0, display: "none", x: "-100vw" },
+    {
+      x: "100vw",
+      opacity: "100%",
+      display: "block",
+      duration: 5,
+    },
+    10
+  );
+
+gsap.to(".cube-tombe", {
+  rotate: 360,
+  repeat: -1,
+  ease: "none",
+  duration: 5,
+});
+
+gsap.to(".peluche-tombe", {
+  rotate: 360,
+  repeat: -1,
+  ease: "none",
+  duration: 2,
+});
+
+gsap.to(".train-tombe", {
+  rotate: 360,
+  repeat: -1,
+  ease: "none",
+  duration: 3,
+});
+
+gsap.to(".etoile-tombe", {
+  rotate: 360,
+  repeat: -1,
+  ease: "none",
+  duration: 10,
+});
+
+gsap
+  .timeline()
+  .fromTo(".fille-chante", { opacity: 0 }, { opacity: "100%", duration: 1 })
+  .to(
+    ".fille-chante",
+    {
+      opacity: "50%",
+      repeat: -1,
+      ease: "power1",
+      yoyo: true,
+      duration: 2,
+    },
+    "<0"
+  )
+  .fromTo(".fille-livre", { opacity: 0 }, { opacity: "100%", duration: 1 })
+  .to(
+    ".fille-livre",
+    {
+      opacity: "50%",
+      repeat: -1,
+      ease: "power1",
+      yoyo: true,
+      duration: 2,
+    },
+    "<1"
+  )
+  .fromTo(".fille-devoir", { opacity: 0 }, { opacity: "100%", duration: 1 })
+  .to(
+    ".fille-devoir",
+    {
+      opacity: "50%",
+      repeat: -1,
+      ease: "power1",
+      yoyo: true,
+      duration: 2,
+    },
+    "<0"
+  )
+  .fromTo(".mere-lit", { opacity: 0 }, { opacity: "100%", duration: 1 })
+  .to(
+    ".fille-devoir",
+    {
+      opacity: 0,
+      duration: 2,
+      display: "none",
+    },
+    10
+  )
+  .to(
+    ".fille-livre",
+    {
+      opacity: 0,
+      duration: 2,
+      display: "none",
+    },
+    10
+  )
+  .to(
+    ".fille-chante",
+    {
+      opacity: 0,
+      display: "none",
+      duration: 2,
+    },
+    10
+  )
+  .to(
+    ".mere-lit",
+    {
+      opacity: 0,
+      display: "none",
+      duration: 2,
+    },
+    10
+  )
+  .fromTo(
+    "#fille-cours",
+    { opacity: 0, display: "none", x: "-100vw" },
+    {
+      x: "100vw",
+      opacity: "100%",
+      display: "block",
+      duration: 5,
+    },
+    10
+  );
+
+gsap.to(".bras-fille-porte-fin", {
+  x: "50%",
+  y: "-20%",
+  rotate: "20%",
+  duration: 3,
+});
+
+gsap
+  .timeline()
+  .to(".bras-fille-train", {
+    x: "-20%",
+    y: "-20%",
+    scale: 1.3,
+    duration: 3,
+  })
+  .to(".bras-fille-train", {
+    y: "10%",
+    x: "30%",
+    scale: 0.7,
+    duration: 3,
+  });
+
+gsap.to(".train", {
+  y: "-10%",
+  x: "-30%",
+  scale: 0.5,
+  duration: 5,
+});
+
+gsap.fromTo(
+  "#ghost-big",
+  { opacity: "100%", y: "-20%", scale: 1.3 },
+  {
+    scale: 1,
+    y: 0,
+    duration: 6,
+  }
+);
+
+gsap
+  .timeline()
+  .to(".yeux-fille-ouvert-fin", {
+    opacity: 0,
+    display: "none",
+    duration: 3,
+  })
+  .to(
+    ".mere-dos",
+    {
+      opacity: "100%",
+      duration: 3,
+    },
+    1
+  )
+  .to(
+    ".mere-dos",
+    {
+      opacity: 0,
+      display: "none",
+      duration: 3,
+    },
+    4
+  )
+  .to(
+    ".derniere-visite",
+    {
+      opacity: "100%",
+      duration: 3,
+    },
+    5
+  )
+  .to(
+    ".derniere-visite",
+    {
+      opacity: 0,
+      duration: 3,
+    },
+    7
+  )
+  .to(
+    ".bras-fille-fin",
+    {
+      opacity: "100%",
+      duration: 3,
+      x: "20%",
+    },
+    9
+  )
+  .to(
+    ".bras-mere",
+    {
+      opacity: "100%",
+      duration: 3,
+    },
+    9
+  )
+  .to(
+    ".bras-fille-fin",
+    {
+      opacity: 0,
+      duration: 3,
+    },
+    13
+  )
+  .to(
+    ".bras-mere",
+    {
+      opacity: 0,
+      duration: 3,
+    },
+    13
+  )
+  .to(
+    ".reunion",
+    {
+      opacity: "100%",
+      duration: 3,
+    },
+    15
+  )
+  .to(
+    ".reunion",
+    {
+      opacity: 0,
+      duration: 3,
+    },
+    20
+  );
+
 /*
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(ScrollTrigger);
