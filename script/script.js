@@ -1,3 +1,14 @@
+document.addEventListener("DOMContentLoaded", (event) => {
+  gsap.registerPlugin(MotionPathPlugin, DrawSVGPlugin, MorphSVGPlugin);
+  // gsap code here!
+});
+document.addEventListener("DOMContentLoaded", (event) => {
+  gsap.registerPlugin(ScrollTrigger);
+});
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(MotionPathPlugin);
+
 gsap.fromTo(".fleche", { y: 10 }, { y: 30, repeat: -1, yoyo: true });
 
 let animYeux = document.querySelector(".debut");
@@ -17,11 +28,150 @@ window.addEventListener("scroll", () => {
   animGhost2.style.animationPlayState = "running";
 });
 
+gsap.to("#chp01", {
+  scrollTrigger: {
+    pin: true,
+    pinSpacing: true,
+    scrub: true,
+    markers: true,
+    start: "top top",
+    end: "bottom top",
+    trigger: "#chp01",
+  },
+});
+
+gsap.to("#chp02", {
+  scrollTrigger: {
+    pin: true,
+    pinSpacing: true,
+    scrub: true,
+    markers: true,
+    start: "top top",
+    end: "bottom top",
+    trigger: "#chp02",
+  },
+});
+
+gsap.to("#chp03", {
+  scrollTrigger: {
+    pin: true,
+    pinSpacing: true,
+    scrub: true,
+    markers: true,
+    start: "top top",
+    end: "bottom top",
+    trigger: "#chp03",
+  },
+});
+
+gsap.to("#chp04", {
+  scrollTrigger: {
+    pin: true,
+    pinSpacing: true,
+    scrub: true,
+    markers: true,
+    start: "top top",
+    end: "bottom top",
+    trigger: "#chp04",
+  },
+});
+
+gsap.to("#chp04-5", {
+  scrollTrigger: {
+    pin: true,
+    pinSpacing: true,
+    scrub: true,
+    markers: true,
+    start: "top top",
+    end: "bottom top",
+    trigger: "#chp04-5",
+  },
+});
+
+gsap.to("#chp05", {
+  scrollTrigger: {
+    pin: true,
+    pinSpacing: true,
+    scrub: true,
+    markers: true,
+    start: "top top",
+    end: "bottom top",
+    trigger: "#chp05",
+  },
+});
+
+gsap.to("#chp05-5", {
+  scrollTrigger: {
+    pin: true,
+    pinSpacing: true,
+    scrub: true,
+    markers: true,
+    start: "top top",
+    end: "bottom top",
+    trigger: "#chp05-5",
+  },
+});
+
+gsap.to("#chp06", {
+  scrollTrigger: {
+    pin: true,
+    pinSpacing: true,
+    scrub: true,
+    markers: true,
+    start: "top top",
+    end: "bottom top",
+    trigger: "#chp06",
+  },
+});
+
+gsap.to("#chp07", {
+  scrollTrigger: {
+    pin: true,
+    pinSpacing: true,
+    scrub: true,
+    markers: true,
+    start: "top top",
+    end: "bottom top",
+    trigger: "#chp07",
+  },
+});
+
+gsap.to("#chp08", {
+  scrollTrigger: {
+    pin: true,
+    pinSpacing: true,
+    scrub: true,
+    markers: true,
+    start: "top top",
+    end: "bottom top",
+    trigger: "#chp08",
+  },
+});
+
+gsap.to("#chp09", {
+  scrollTrigger: {
+    pin: true,
+    pinSpacing: true,
+    scrub: true,
+    markers: true,
+    start: "top top",
+    end: "bottom top",
+    trigger: "#chp09",
+  },
+});
+
+/*-------------------------------------------------------------------------------------
+  # CHAPITRE 1
+  -------------------------------------------------------------------------------------*/
+
 gsap
   .timeline()
   .fromTo(
     animYeux,
-    { opacity: "100%", width: 462 },
+    {
+      opacity: "100%",
+      width: 462,
+    },
     { opacity: 0, scale: 0, duration: 5 }
   )
   .fromTo(
@@ -74,6 +224,10 @@ gsap
     "<0"
   );
 
+/*-------------------------------------------------------------------------------------
+  # CHAPITRE 2
+  -------------------------------------------------------------------------------------*/
+
 gsap
   .timeline()
   .to(".fille-coucher", { opacity: 0, duration: 3 })
@@ -84,6 +238,10 @@ gsap
     { x: "10%", repeat: -1, yoyo: true, duration: 4 },
     "<0"
   );
+
+/*-------------------------------------------------------------------------------------
+  # CHAPITRE 3
+  -------------------------------------------------------------------------------------*/
 
 gsap
   .timeline()
@@ -130,7 +288,15 @@ gsap
     20
   );
 
+/*-------------------------------------------------------------------------------------
+  # CHAPITRE 4
+  -------------------------------------------------------------------------------------*/
+
 gsap.to(".paper", { y: "100%", duration: 10 });
+
+/*-------------------------------------------------------------------------------------
+  # CHAPITRE 4-5
+  -------------------------------------------------------------------------------------*/
 
 gsap.to(".cube", { rotate: 360, repeat: -1, ease: "none", duration: 4 });
 gsap.fromTo(
@@ -142,11 +308,6 @@ gsap.fromTo(
   ".peluche",
   { scaleX: "90%" },
   { scaleX: "100%", repeat: -1, yoyo: true, ease: "bounce", duration: 4 }
-);
-gsap.fromTo(
-  ".note-musique",
-  { skewX: "9%", y: 0 },
-  { skewX: "15%", repeat: -1, yoyo: true, y: "10%", duration: 2 }
 );
 
 gsap
@@ -256,6 +417,10 @@ gsap
     10
   );
 
+/*-------------------------------------------------------------------------------------
+  # CHAPITRE 5
+  -------------------------------------------------------------------------------------*/
+
 gsap.to(".cube-tombe", {
   rotate: 360,
   repeat: -1,
@@ -283,6 +448,16 @@ gsap.to(".etoile-tombe", {
   ease: "none",
   duration: 10,
 });
+
+/*-------------------------------------------------------------------------------------
+  # CHAPITRE 5-5
+  -------------------------------------------------------------------------------------*/
+
+gsap.fromTo(
+  ".note-musique",
+  { skewX: "9%", y: 0 },
+  { skewX: "15%", repeat: -1, yoyo: true, y: "10%", duration: 2 }
+);
 
 gsap
   .timeline()
@@ -371,12 +546,20 @@ gsap
     10
   );
 
+/*-------------------------------------------------------------------------------------
+  # CHAPITRE 6
+  -------------------------------------------------------------------------------------*/
+
 gsap.to(".bras-fille-porte-fin", {
   x: "50%",
   y: "-20%",
   rotate: "20%",
   duration: 3,
 });
+
+/*-------------------------------------------------------------------------------------
+  # CHAPITRE 7
+  -------------------------------------------------------------------------------------*/
 
 gsap
   .timeline()
@@ -409,6 +592,10 @@ gsap.fromTo(
     duration: 6,
   }
 );
+
+/*-------------------------------------------------------------------------------------
+  # CHAPITRE 8
+  -------------------------------------------------------------------------------------*/
 
 gsap
   .timeline()
@@ -500,10 +687,8 @@ gsap
     20
   );
 
-/*
-document.addEventListener("DOMContentLoaded", (event) => {
-  gsap.registerPlugin(ScrollTrigger);
-});
+/*-------------------------------------------------------------------------------------
+  # CHAPITRE 8
+  -------------------------------------------------------------------------------------*/
 
-GSDevTools.create();
-*/
+//parallaxe

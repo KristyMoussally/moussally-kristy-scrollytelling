@@ -44,6 +44,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  border: 1px green solid;
 }
 
 body {
@@ -424,8 +425,8 @@ section {
   position: absolute;
   aspect-ratio: 640/900;
   bottom: 0;
-  background-image: url(../assets/img/img_personnages/spritesheet_fille.png);
-  background-size: 410%;
+  background-image: url(../assets/img/img_personnages/spritesheet_fille_2.png);
+  background-size: 400%;
   width: 18%;
   animation-name: fille;
   animation-duration: 1s;
