@@ -1,3 +1,7 @@
+/*-------------------------------------------------------------------------------------
+  # APPEL AU PLUGIN GSAP
+  -------------------------------------------------------------------------------------*/
+
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(MotionPathPlugin, DrawSVGPlugin, MorphSVGPlugin);
   // gsap code here!
@@ -9,7 +13,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(MotionPathPlugin);
 
+/*-------------------------------------------------------------------------------------
+  # HEARDER
+  -------------------------------------------------------------------------------------*/
+
 gsap.fromTo(".fleche", { y: 10 }, { y: 30, repeat: -1, yoyo: true });
+
+/*-------------------------------------------------------------------------------------
+  # SPRITESHEET
+  -------------------------------------------------------------------------------------*/
 
 let animYeux = document.querySelector(".debut");
 let animGhost = document.querySelector("#ghost");
@@ -28,6 +40,10 @@ window.addEventListener("scroll", () => {
   animGhost2.style.animationPlayState = "running";
 });
 
+/*-------------------------------------------------------------------------------------
+  # CHAPITRE 1
+  -------------------------------------------------------------------------------------*/
+
 gsap.to("#chp01", {
   scrollTrigger: {
     pin: true,
@@ -39,130 +55,6 @@ gsap.to("#chp01", {
     trigger: "#chp01",
   },
 });
-
-gsap.to("#chp02", {
-  scrollTrigger: {
-    pin: true,
-    pinSpacing: true,
-    scrub: true,
-    markers: true,
-    start: "top top",
-    end: "bottom top",
-    trigger: "#chp02",
-  },
-});
-
-gsap.to("#chp03", {
-  scrollTrigger: {
-    pin: true,
-    pinSpacing: true,
-    scrub: true,
-    markers: true,
-    start: "top top",
-    end: "bottom top",
-    trigger: "#chp03",
-  },
-});
-
-gsap.to("#chp04", {
-  scrollTrigger: {
-    pin: true,
-    pinSpacing: true,
-    scrub: true,
-    markers: true,
-    start: "top top",
-    end: "bottom top",
-    trigger: "#chp04",
-  },
-});
-
-gsap.to("#chp04-5", {
-  scrollTrigger: {
-    pin: true,
-    pinSpacing: true,
-    scrub: true,
-    markers: true,
-    start: "top top",
-    end: "bottom top",
-    trigger: "#chp04-5",
-  },
-});
-
-gsap.to("#chp05", {
-  scrollTrigger: {
-    pin: true,
-    pinSpacing: true,
-    scrub: true,
-    markers: true,
-    start: "top top",
-    end: "bottom top",
-    trigger: "#chp05",
-  },
-});
-
-gsap.to("#chp05-5", {
-  scrollTrigger: {
-    pin: true,
-    pinSpacing: true,
-    scrub: true,
-    markers: true,
-    start: "top top",
-    end: "bottom top",
-    trigger: "#chp05-5",
-  },
-});
-
-gsap.to("#chp06", {
-  scrollTrigger: {
-    pin: true,
-    pinSpacing: true,
-    scrub: true,
-    markers: true,
-    start: "top top",
-    end: "bottom top",
-    trigger: "#chp06",
-  },
-});
-
-gsap.to("#chp07", {
-  scrollTrigger: {
-    pin: true,
-    pinSpacing: true,
-    scrub: true,
-    markers: true,
-    start: "top top",
-    end: "bottom top",
-    trigger: "#chp07",
-  },
-});
-
-gsap.to("#chp08", {
-  scrollTrigger: {
-    pin: true,
-    pinSpacing: true,
-    scrub: true,
-    markers: true,
-    start: "top top",
-    end: "bottom top",
-    trigger: "#chp08",
-  },
-});
-
-gsap.to("#chp09", {
-  scrollTrigger: {
-    pin: true,
-    pinSpacing: true,
-    scrub: true,
-    markers: true,
-    start: "top top",
-    end: "bottom top",
-    trigger: "#chp09",
-  },
-});
-
-/*-------------------------------------------------------------------------------------
-  # CHAPITRE 1
-  -------------------------------------------------------------------------------------*/
 
 gsap
   .timeline()
@@ -228,6 +120,18 @@ gsap
   # CHAPITRE 2
   -------------------------------------------------------------------------------------*/
 
+gsap.to("#chp02", {
+  scrollTrigger: {
+    pin: true,
+    pinSpacing: true,
+    scrub: true,
+    markers: true,
+    start: "top top",
+    end: "bottom top",
+    trigger: "#chp02",
+  },
+});
+
 gsap
   .timeline()
   .to(".fille-coucher", { opacity: 0, duration: 3 })
@@ -242,6 +146,18 @@ gsap
 /*-------------------------------------------------------------------------------------
   # CHAPITRE 3
   -------------------------------------------------------------------------------------*/
+
+gsap.to("#chp03", {
+  scrollTrigger: {
+    pin: true,
+    pinSpacing: true,
+    scrub: true,
+    markers: true,
+    start: "top top",
+    end: "bottom top",
+    trigger: "#chp03",
+  },
+});
 
 gsap
   .timeline()
@@ -292,11 +208,35 @@ gsap
   # CHAPITRE 4
   -------------------------------------------------------------------------------------*/
 
+gsap.to("#chp04", {
+  scrollTrigger: {
+    pin: true,
+    pinSpacing: true,
+    scrub: true,
+    markers: true,
+    start: "top top",
+    end: "bottom top",
+    trigger: "#chp04",
+  },
+});
+
 gsap.to(".paper", { y: "100%", duration: 10 });
 
 /*-------------------------------------------------------------------------------------
   # CHAPITRE 4-5
   -------------------------------------------------------------------------------------*/
+
+gsap.to("#chp04-5", {
+  scrollTrigger: {
+    pin: true,
+    pinSpacing: true,
+    scrub: true,
+    markers: true,
+    start: "top top",
+    end: "bottom top",
+    trigger: "#chp04-5",
+  },
+});
 
 gsap.to(".cube", { rotate: 360, repeat: -1, ease: "none", duration: 4 });
 gsap.fromTo(
@@ -421,6 +361,18 @@ gsap
   # CHAPITRE 5
   -------------------------------------------------------------------------------------*/
 
+gsap.to("#chp05", {
+  scrollTrigger: {
+    pin: true,
+    pinSpacing: true,
+    scrub: true,
+    markers: true,
+    start: "top top",
+    end: "bottom top",
+    trigger: "#chp05",
+  },
+});
+
 gsap.to(".cube-tombe", {
   rotate: 360,
   repeat: -1,
@@ -452,6 +404,18 @@ gsap.to(".etoile-tombe", {
 /*-------------------------------------------------------------------------------------
   # CHAPITRE 5-5
   -------------------------------------------------------------------------------------*/
+
+gsap.to("#chp05-5", {
+  scrollTrigger: {
+    pin: true,
+    pinSpacing: true,
+    scrub: true,
+    markers: true,
+    start: "top top",
+    end: "bottom top",
+    trigger: "#chp05-5",
+  },
+});
 
 gsap.fromTo(
   ".note-musique",
@@ -550,6 +514,18 @@ gsap
   # CHAPITRE 6
   -------------------------------------------------------------------------------------*/
 
+gsap.to("#chp06", {
+  scrollTrigger: {
+    pin: true,
+    pinSpacing: true,
+    scrub: true,
+    markers: true,
+    start: "top top",
+    end: "bottom top",
+    trigger: "#chp06",
+  },
+});
+
 gsap.to(".bras-fille-porte-fin", {
   x: "50%",
   y: "-20%",
@@ -560,6 +536,18 @@ gsap.to(".bras-fille-porte-fin", {
 /*-------------------------------------------------------------------------------------
   # CHAPITRE 7
   -------------------------------------------------------------------------------------*/
+
+gsap.to("#chp07", {
+  scrollTrigger: {
+    pin: true,
+    pinSpacing: true,
+    scrub: true,
+    markers: true,
+    start: "top top",
+    end: "bottom top",
+    trigger: "#chp07",
+  },
+});
 
 gsap
   .timeline()
@@ -596,6 +584,18 @@ gsap.fromTo(
 /*-------------------------------------------------------------------------------------
   # CHAPITRE 8
   -------------------------------------------------------------------------------------*/
+
+gsap.to("#chp08", {
+  scrollTrigger: {
+    pin: true,
+    pinSpacing: true,
+    scrub: true,
+    markers: true,
+    start: "top top",
+    end: "bottom top",
+    trigger: "#chp08",
+  },
+});
 
 gsap
   .timeline()
@@ -688,7 +688,18 @@ gsap
   );
 
 /*-------------------------------------------------------------------------------------
-  # CHAPITRE 8
+  # CHAPITRE 9
   -------------------------------------------------------------------------------------*/
 
 //parallaxe
+gsap.to("#chp09", {
+  scrollTrigger: {
+    pin: true,
+    pinSpacing: true,
+    scrub: true,
+    markers: true,
+    start: "top top",
+    end: "bottom top",
+    trigger: "#chp09",
+  },
+});
