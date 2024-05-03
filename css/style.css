@@ -120,17 +120,26 @@ header,
 }
 
 #fleche {
+  width: 40%;
   position: absolute;
   bottom: 25vh;
   left: 50%;
   visibility: hidden;
 }
 
-.fleche-morph{
+#circle {
+  width: 40%;
   position: absolute;
   bottom: 22vh;
   left: 49%;
-  fill: var(--grey)
+  fill: var(--grey);
+}
+
+#svg2 {
+  width: 10%;
+  position: absolute;
+  bottom: 22vh;
+  left: 49%;
 }
 
 /*-------------------------------------------------------------------------------------
@@ -319,8 +328,7 @@ section {
   color: var(--white);
   left: 0;
   right: 0;
-  z-index: 2
-  ;
+  z-index: 2;
 }
 /*change opacity (change scene) with gsap*/
 .wagon-coin {

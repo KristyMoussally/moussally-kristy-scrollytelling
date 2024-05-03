@@ -3,24 +3,25 @@
   -------------------------------------------------------------------------------------*/
 
 document.addEventListener("DOMContentLoaded", (event) => {
-  gsap.registerPlugin(MotionPathPlugin, DrawSVGPlugin, MorphSVGPlugin);
-  // gsap code here!
+  gsap.registerPlugin(
+    MotionPathPlugin,
+    DrawSVGPlugin,
+    MorphSVGPlugin,
+    ScrollTrigger
+  );
 });
-document.addEventListener("DOMContentLoaded", (event) => {
-  gsap.registerPlugin(ScrollTrigger);
-});
-
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(MotionPathPlugin);
 
 /*-------------------------------------------------------------------------------------
   # HEARDER
   -------------------------------------------------------------------------------------*/
 
-  let animHeader = gsap.to(".fleche-morph", { 
-    morphSVG: ".fleche"
-  });
-gsap.fromTo(".fleche", { y: 10 }, { y: 30, repeat: -1, yoyo: true });
+gsap
+  .timeline()
+  .to("#circle", {
+    morphSVG: "#fleche",
+    duration: 1.5,
+  })
+  .fromTo("#circle", { y: 10 }, { y: 30, repeat: -1, yoyo: true });
 
 /*-------------------------------------------------------------------------------------
   # SPRITESHEET
@@ -57,17 +58,21 @@ const timeCph1 = gsap.timeline({
     markers: true,
     start: "top top",
     end: "bottom top",
-    trigger: "section",
-    
+    trigger: "#chp01",
+
     onEnter: (e) => {
-      timeCph1.restart()
-    }
+      timeCph1.restart();
+    },
+    onLeave: (e) => {
+      timeCph1.restart();
+    },
   },
 });
 
-timeCph1.pause()
+timeCph1.pause();
 
-timeCph1.fromTo(
+timeCph1
+  .fromTo(
     animYeux,
     {
       opacity: "100%",
@@ -124,9 +129,7 @@ timeCph1.fromTo(
     { opacity: "100%", duration: 5 },
     "<0"
   )
-  .paused( true );
-
-
+  .paused(true);
 
 /*-------------------------------------------------------------------------------------
   # ANIMATION CHAPITRE 2
@@ -232,7 +235,7 @@ gsap.to("#chp04", {
   },
 });
 
-gsap.to(".paper", { y: "100%",ease:"none", duration: 20 });
+gsap.to(".paper", { y: "100%", ease: "none", duration: 20 });
 
 /*-------------------------------------------------------------------------------------
   # ANIMATION CHAPITRE 4-5

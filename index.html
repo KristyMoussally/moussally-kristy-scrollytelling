@@ -9,42 +9,25 @@
   </head>
   <body>
     <header>
+      <ul class="technique-gsap"> 
+        <li>Un morph ce fait d'un cercle au forme de flèche puis suis une timeline où elle guide les visiteurs à explorer la page</li> 
+        <li>Cette animation se fait automatiquement lors qu'on ouvre la page pour guider les visiteurs à scroller après</li> 
+        <li>Donc il n'y aura pas de scrollTrigger dans le Header</li> 
+      </ul>
       <h1>Voies de souvenirs</h1>
       <p>
         Ceci est une histoire d'une jeune fille qui s'enfuit d'un fontôme. Elle
         visite des moments de sa jeunesse et accepte l'accident de sa mère.
       </p>
-      <svg class="fleche-morph" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="40"/>
-     </svg> 
-        <svg
-        class="fleche"
-          fill="#ffffff"
-          height="64px"
-          width="64px"
-          version="1.1"
-          id="fleche"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          viewBox="0 0 330 330"
-          xml:space="preserve"
-          stroke="#ffffff"
-        >
-          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-          <g
-            id="SVGRepo_tracerCarrier"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke="#CCCCCC"
-            stroke-width="13.2"
-          ></g>
-          <g id="SVGRepo_iconCarrier">
-            <path
-              id="XMLID_225_"
-              d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
-            ></path>
-          </g>
-        </svg>
+      <svg id="svg2" viewBox="0 10 500 500">
+
+        <path id="circle" class="st1" d="M490.1,280.649c0,44.459-36.041,80.5-80.5,80.5s-80.5-36.041-80.5-80.5s36.041-80.5,80.5-80.5
+        S490.1,236.19,490.1,280.649z" />
+      
+      </svg>
+      <div class="scroll-down">
+        <path id="fleche" class="fleche-morph" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"></path>
+      </div>
       <p class="intro">
         Projet scrollytelling créé dans le cadre du cours Optimisation Web -
         Intégration multimédia - Collège Montmorency. © 2024 - Conception :
