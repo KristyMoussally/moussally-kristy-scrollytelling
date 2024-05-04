@@ -30,7 +30,7 @@ gsap
 let animYeux = document.querySelector(".debut");
 let animGhost = document.querySelector("#ghost");
 let animGhost2 = document.querySelector("#ghost-big");
-/*
+
 window.addEventListener("scroll", () => {
   setTimeout(() => {
     animYeux.style.animationPlayState = "paused";
@@ -43,35 +43,27 @@ window.addEventListener("scroll", () => {
   animGhost.style.animationPlayState = "running";
   animGhost2.style.animationPlayState = "running";
 });
-*/
-const chp1Animation = document.querySelector("#chp01");
 
 /*-------------------------------------------------------------------------------------
   # ANIMATION CHAPITRE 1
   -------------------------------------------------------------------------------------*/
 
-const timeCph1 = gsap.timeline({
+const timeChp1 = gsap.timeline({
   scrollTrigger: {
     pin: true,
     pinSpacing: true,
-    scrub: true,
+    scrub: false,
     markers: true,
     start: "top top",
     end: "bottom top",
     trigger: "#chp01",
-
-    onEnter: (e) => {
-      timeCph1.restart();
-    },
-    onLeave: (e) => {
-      timeCph1.restart();
-    },
+    toggleActions: "restart complete reverse reset",
   },
 });
 
-timeCph1.pause();
+timeChp1.pause();
 
-timeCph1
+timeChp1
   .fromTo(
     animYeux,
     {
@@ -135,11 +127,11 @@ timeCph1
   # ANIMATION CHAPITRE 2
   -------------------------------------------------------------------------------------*/
 
-gsap.to("#chp02", {
+const timeChp2 = gsap.timeline({
   scrollTrigger: {
     pin: true,
     pinSpacing: true,
-    scrub: true,
+    scrub: false,
     markers: true,
     start: "top top",
     end: "bottom top",
@@ -147,8 +139,9 @@ gsap.to("#chp02", {
   },
 });
 
-gsap
-  .timeline()
+timeChp2.pause();
+
+timeChp2
   .to(".fille-coucher", { opacity: 0, duration: 3 })
   .fromTo(".fille-debout", { opacity: 0 }, { opacity: "100%", duration: 4 }, 1)
   .fromTo(
@@ -156,29 +149,30 @@ gsap
     { x: 0 },
     { x: "10%", repeat: -1, yoyo: true, duration: 4 },
     "<0"
-  );
+  )
+  .paused(true);
 
 /*-------------------------------------------------------------------------------------
   # ANIMATION CHAPITRE 3
   -------------------------------------------------------------------------------------*/
 
-gsap.to("#chp03", {
+const timeChp3 = gsap.timeline({
   scrollTrigger: {
     pin: true,
     pinSpacing: true,
-    scrub: true,
+    scrub: false,
     markers: true,
     start: "top top",
     end: "bottom top",
     trigger: "#chp03",
+    toggleActions: "play complete none reset",
   },
 });
 
-gsap
-  .timeline()
+timeChp3.pause();
 
+timeChp3
   .to(".regard-droit", { display: "none", duration: 3 })
-
   .to(".wagon-coin", { display: "none", duration: 3 }, "<0")
   .to(".porte-fond", { display: "block", opacity: "100%", duration: 3 }, "<0")
   .to(".porte", { display: "block", opacity: "100%", duration: 2 }, 3)
@@ -217,17 +211,18 @@ gsap
     { opacity: 0, x: 0 },
     { opacity: "100%", x: "50%", duration: 5 },
     20
-  );
+  )
+  .paused(true);
 
 /*-------------------------------------------------------------------------------------
   # ANIMATION CHAPITRE 4
   -------------------------------------------------------------------------------------*/
 
-gsap.to("#chp04", {
+const timeChp4 = gsap.timeline({
   scrollTrigger: {
     pin: true,
     pinSpacing: true,
-    scrub: true,
+    scrub: 1,
     markers: true,
     start: "top top",
     end: "bottom top",
@@ -235,17 +230,20 @@ gsap.to("#chp04", {
   },
 });
 
-gsap.to(".paper", { y: "100%", ease: "none", duration: 20 });
+timeChp4.pause();
 
+timeChp4
+  .to(".paper", { y: "-100vh", ease: "none" })
+  .to(".v1", { y: "100vh", ease: "none" }, "<0")
+  .paused(true);
 /*-------------------------------------------------------------------------------------
   # ANIMATION CHAPITRE 4-5
   -------------------------------------------------------------------------------------*/
 
-gsap.to("#chp04-5", {
+const timeChp4_5 = gsap.timeline({
   scrollTrigger: {
     pin: true,
     pinSpacing: true,
-    scrub: true,
     markers: true,
     start: "top top",
     end: "bottom top",
@@ -253,20 +251,26 @@ gsap.to("#chp04-5", {
   },
 });
 
+gsap.to(".train-jouet", {
+  motionPath: {
+    align: ".trace",
+    path: ".trace",
+  },
+  duration: 5,
+  repeat: -1,
+  yoyo: true,
+  ease: "power1",
+});
+
 gsap.to(".cube", { rotate: 360, repeat: -1, ease: "none", duration: 4 });
-gsap.fromTo(
-  ".train-jouet",
-  { x: 0 },
-  { x: "50%", repeat: -1, yoyo: true, ease: "power1", duration: 4 }
-);
+
 gsap.fromTo(
   ".peluche",
   { scaleX: "90%" },
   { scaleX: "100%", repeat: -1, yoyo: true, ease: "bounce", duration: 4 }
 );
 
-gsap
-  .timeline()
+timeChp4_5
   .fromTo(
     ".fille-joue-block ",
     { opacity: 0 },
@@ -370,13 +374,14 @@ gsap
       duration: 5,
     },
     10
-  );
+  )
+  .paused(true);
 
 /*-------------------------------------------------------------------------------------
   # ANIMATION CHAPITRE 5
   -------------------------------------------------------------------------------------*/
 
-gsap.to("#chp05", {
+const timeChp5 = gsap.timeline({
   scrollTrigger: {
     pin: true,
     pinSpacing: true,
@@ -387,6 +392,18 @@ gsap.to("#chp05", {
     trigger: "#chp05",
   },
 });
+
+timeChp5
+  .to(".v2", { y: "250%", ease: "none" }, "<0")
+  .to(".c1", {
+    y: "-30vh",
+  })
+  .to(".c2", {
+    y: "-100vh",
+  })
+  .to(".c3", {
+    y: "-50vh",
+  });
 
 gsap.to(".cube-tombe", {
   rotate: 360,
@@ -420,11 +437,11 @@ gsap.to(".etoile-tombe", {
   # ANIMATION CHAPITRE 5-5
   -------------------------------------------------------------------------------------*/
 
-gsap.to("#chp05-5", {
+const timeChp5_5 = gsap.timeline({
   scrollTrigger: {
     pin: true,
     pinSpacing: true,
-    scrub: true,
+    scrub: false,
     markers: true,
     start: "top top",
     end: "bottom top",
@@ -432,14 +449,15 @@ gsap.to("#chp05-5", {
   },
 });
 
-gsap.fromTo(
-  ".note-musique",
-  { skewX: "9%", y: 0 },
-  { skewX: "15%", repeat: -1, yoyo: true, y: "10%", duration: 2 }
-);
-
-gsap
-  .timeline()
+timeChp5_5
+  .fromTo(
+    ".dessin-a",
+    { drawSVG: "0% 0%" },
+    {
+      drawSVG: "0% 100%",
+      duration: 3,
+    }
+  )
   .fromTo(".fille-chante", { opacity: 0 }, { opacity: "100%", duration: 1 })
   .to(
     ".fille-chante",
@@ -523,13 +541,20 @@ gsap
       duration: 5,
     },
     10
-  );
+  )
+  .paused(true);
+
+gsap.fromTo(
+  ".note-musique",
+  { skewX: "9%", y: 0 },
+  { skewX: "15%", repeat: -1, yoyo: true, y: "10%", duration: 2 }
+);
 
 /*-------------------------------------------------------------------------------------
   # ANIMATION CHAPITRE 6
   -------------------------------------------------------------------------------------*/
 
-gsap.to("#chp06", {
+const timeChp6 = gsap.timeline({
   scrollTrigger: {
     pin: true,
     pinSpacing: true,
@@ -541,7 +566,7 @@ gsap.to("#chp06", {
   },
 });
 
-gsap.to(".bras-fille-porte-fin", {
+timeChp6.to(".bras-fille-porte-fin", {
   x: "50%",
   y: "-20%",
   rotate: "20%",
@@ -552,7 +577,7 @@ gsap.to(".bras-fille-porte-fin", {
   # ANIMATION CHAPITRE 7
   -------------------------------------------------------------------------------------*/
 
-gsap.to("#chp07", {
+const timeChp7 = gsap.timeline({
   scrollTrigger: {
     pin: true,
     pinSpacing: true,
@@ -564,8 +589,7 @@ gsap.to("#chp07", {
   },
 });
 
-gsap
-  .timeline()
+timeChp7
   .to(".bras-fille-train", {
     x: "-20%",
     y: "-20%",
@@ -579,32 +603,37 @@ gsap
     duration: 3,
   });
 
-gsap.to(".train", {
-  y: "-10%",
-  x: "-30%",
-  scale: 0.5,
-  duration: 5,
-});
+timeChp7.to(
+  ".train",
+  {
+    y: "-10%",
+    x: "-30%",
+    scale: 0.5,
+    duration: 5,
+  },
+  1
+);
 
-gsap.fromTo(
+timeChp7.fromTo(
   "#ghost-big",
-  { opacity: "100%", y: "-20%", scale: 1.3 },
+  { opacity: "100%", y: "200%", scale: 1.3 },
   {
     scale: 1,
     y: 0,
-    duration: 6,
-  }
+    duration: 3,
+  },
+  1
 );
 
 /*-------------------------------------------------------------------------------------
   # ANIMATION CHAPITRE 8
   -------------------------------------------------------------------------------------*/
 
-gsap.to("#chp08", {
+const timeChp8 = gsap.timeline({
   scrollTrigger: {
     pin: true,
     pinSpacing: true,
-    scrub: true,
+    toggleActions: "play complete reset reset",
     markers: true,
     start: "top top",
     end: "bottom top",
@@ -612,8 +641,9 @@ gsap.to("#chp08", {
   },
 });
 
-gsap
-  .timeline()
+timeChp8.pause();
+
+timeChp8
   .to(".yeux-fille-ouvert-fin", {
     opacity: 0,
     display: "none",
@@ -700,7 +730,8 @@ gsap
       duration: 3,
     },
     20
-  );
+  )
+  .paused(true);
 
 /*-------------------------------------------------------------------------------------
   # ANIMATION CHAPITRE 9

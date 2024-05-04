@@ -151,6 +151,8 @@ section {
   height: 100vh;
   border: 1px red solid;
   position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .is-scrolling {
@@ -465,6 +467,13 @@ section {
   # CHAPITRE 4 (4-5)
   -------------------------------------------------------------------------------------*/
 
+#trace {
+  position: absolute;
+  bottom: 0;
+  fill: transparent;
+  transform: scale(30%);
+}
+
 .chp04 {
   color: var(--white);
   top: 50%;
@@ -605,6 +614,16 @@ section {
   color: var(--white);
   right: 0;
   left: 0;
+}
+
+#aDessin {
+  fill: white;
+  position: absolute;
+  bottom: 20vh;
+  left: 40vw;
+  stroke-width: 100%;
+  width: 5vw;
+  transform: rotate(70deg);
 }
 
 .wagon-ecole {

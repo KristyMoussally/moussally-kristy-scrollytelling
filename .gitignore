@@ -1,3 +1,6 @@
 
-# Ignore le fichier script au cas où les liens des plugins fonctionne du github
+# Ignore le dossier script au cas où les liens des plugins fonctionne du github
 script/
+
+# Ignore le fichier index.html au cas où les liens des plugins fonctionne du github
+index.html
