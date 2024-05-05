@@ -626,6 +626,17 @@ section {
   transform: rotate(70deg);
 }
 
+.dessin-corps,
+.dessin-trait {
+  fill: hidden;
+}
+
+.dessin-corps,
+.dessin-trait {
+  stroke: var(--darkgrey);
+  stroke-width: 10px;
+}
+
 .wagon-ecole {
   background-image: url(../assets/img/img_arriere_plan/wagon_ecole.png);
   background-size: cover;

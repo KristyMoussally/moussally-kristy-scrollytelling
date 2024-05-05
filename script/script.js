@@ -450,14 +450,6 @@ const timeChp5_5 = gsap.timeline({
 });
 
 timeChp5_5
-  .fromTo(
-    ".dessin-a",
-    { drawSVG: "0% 0%" },
-    {
-      drawSVG: "0% 100%",
-      duration: 3,
-    }
-  )
   .fromTo(".fille-chante", { opacity: 0 }, { opacity: "100%", duration: 1 })
   .to(
     ".fille-chante",
@@ -512,6 +504,26 @@ timeChp5_5
       display: "none",
     },
     10
+  )
+  .fromTo(
+    ".dessin-corps",
+    {
+      drawSVG: "0% 0%",
+    },
+    {
+      drawSVG: "0% 100%",
+      duration: 1,
+    }
+  )
+  .fromTo(
+    ".dessin-trait",
+    {
+      drawSVG: "0% 0%",
+    },
+    {
+      drawSVG: "0% 100%",
+      duration: 1,
+    }
   )
   .to(
     ".fille-chante",
