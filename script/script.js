@@ -749,8 +749,10 @@ timeChp8
   # ANIMATION CHAPITRE 9
   -------------------------------------------------------------------------------------*/
 
+const speedElement = 100;
+
 //parallaxe
-gsap.to("#chp09", {
+const timeChp9 = gsap.timeline({
   scrollTrigger: {
     pin: true,
     pinSpacing: true,
@@ -761,3 +763,14 @@ gsap.to("#chp09", {
     trigger: "#chp09",
   },
 });
+
+timeChp9.to(
+  "#chp09",
+  {
+    y: -0.2 * speedElement,
+    ease: "power1.in",
+  },
+  0
+);
+timeChp9.to(".gazon", { x: -1.2 * speedElement, ease: "power1.in" }, 0);
+timeChp9.to(".tracks", { y: 1 * speedElement, x: 0.5 * speedElement }, 0.03);
