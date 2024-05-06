@@ -57,7 +57,7 @@ const timeChp1 = gsap.timeline({
     start: "top top",
     end: "bottom top",
     trigger: "#chp01",
-    toggleActions: "restart complete reverse reset",
+    toggleActions: "play complete reverse reset",
   },
 });
 
@@ -134,7 +134,8 @@ timeChp1.fromTo(
     ease: "power1",
   },
   0
-);
+)
+.paused(true);
 
 /*-------------------------------------------------------------------------------------
   # ANIMATION CHAPITRE 2
@@ -148,6 +149,7 @@ const timeChp2 = gsap.timeline({
     markers: true,
     start: "top top",
     end: "bottom top",
+    toggleActions: "play none reset play",
     trigger: "#chp02",
   },
 });
@@ -238,7 +240,8 @@ timeChp2.fromTo(
     ease: "power1",
   },
   0
-);
+)
+.paused(true);
 
 /*-------------------------------------------------------------------------------------
   # ANIMATION CHAPITRE 4
@@ -274,6 +277,7 @@ const timeChp4_5 = gsap.timeline({
     markers: true,
     start: "top top",
     end: "bottom top",
+    toggleActions: "play none reset play",
     trigger: "#chp04-5",
   },
 });
@@ -449,7 +453,7 @@ timeChp5
   )
   .to(".c2", { y: -100 * speed, ease: "power1.in" }, 0.03)
   .to(".c3", { y: -10 * speed }, 0.05)
-  .to(".peluche-tombe", { y: 5 * speed }, 0.02)
+  .to(".peluche-tombe", { y: 9 * speed }, 0.02)
   .to(".train-tombe", { y: 20 * speed }, 0.03);
 
 gsap.to(".cube-tombe", {
@@ -492,6 +496,7 @@ const timeChp5_5 = gsap.timeline({
     markers: true,
     start: "top top",
     end: "bottom top",
+    toggleActions: "play complete reset play",
     trigger: "#chp05-5",
   },
 });

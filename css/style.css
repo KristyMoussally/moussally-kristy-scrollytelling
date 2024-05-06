@@ -723,6 +723,7 @@ section {
 #chp06 {
   background-image: url(../assets/img/img_arriere_plan/arriere_plan_porte.jpg);
   background-position: 20%;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
