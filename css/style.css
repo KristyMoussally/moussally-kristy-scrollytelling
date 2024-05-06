@@ -617,7 +617,7 @@ section {
 }
 
 #aDessin {
-  fill: white;
+  fill: transparent;
   position: absolute;
   bottom: 20vh;
   left: 40vw;
