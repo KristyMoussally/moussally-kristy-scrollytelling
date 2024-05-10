@@ -369,7 +369,7 @@ section {
 .regard-droit {
   position: absolute;
   max-width: 70vmax;
-  top: 0;
+  bottom: 0;
   left: 0;
 }
 
@@ -433,7 +433,7 @@ section {
   opacity: 0;
   position: absolute;
   max-width: 70vmax;
-  top: 0;
+  bottom: 0;
   left: 0;
 }
 
