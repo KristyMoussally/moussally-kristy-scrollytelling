@@ -635,6 +635,19 @@ section {
   right: 20%;
 }
 
+.t2{
+  color: var(--white);
+  top: 60%;
+  right: 10%;
+}
+
+.t3{
+  color: var(--white);
+  top: 70%;
+  right: 30%;
+}
+
+
 .chp05-5 {
   color: var(--white);
   right: 0;
