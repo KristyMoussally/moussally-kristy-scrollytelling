@@ -8,10 +8,19 @@ Page Speed Insights - Rapport du 12 mai 2024, 12:52:00”.
 
 ## Problème #1
 
-Largest Contentful Paint element
+### Largest Contentful Paint element (speed load)
 
-- Réduire le poids des médias
+### Action concrète pour résoudre le problème
+
+Réduire le poids des médias en mettant les images en lazy load
+Donc pas tous les images s'activent en même temps.
+
+### Résultat
 
 ## Problème #2
+
+### third-party code
+
+### Action concrète pour résoudre le problème
 
 ## Problème #3

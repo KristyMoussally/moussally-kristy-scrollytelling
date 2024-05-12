@@ -1,24 +1,16 @@
-/*-------------------------------------------------------------------------------------
-# FONT_FACE
--------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------# FONT_FACE-------------------------------------------------------------------------------------*/
 @font-face {
   src: url("../assets/fonts/HandyTimes.ttf") format("truetype");
   font-family: "HandyTimes";
 }
-
 @font-face {
   src: url("../assets/fonts/manus.ttf") format("truetype");
   font-family: "Manus";
 }
-
 @font-face {
   src: url(../assets/fonts/NoScary.ttf) format(truetype);
   font-family: "NoScary";
-}
-
-/*-------------------------------------------------------------------------------------
-  # PALETTE DE COULEURS
-  -------------------------------------------------------------------------------------*/
+} /*------------------------------------------------------------------------------------- # PALETTE DE COULEURS -------------------------------------------------------------------------------------*/
 :root {
   --black: #000000;
   --dark: #212529;
@@ -27,58 +19,44 @@
   --lightgrey: #dee2e6;
   --light: #f8f9fa;
   --white: #ffffff;
-}
-/*-------------------------------------------------------------------------------------
-  # FONTS
-  -------------------------------------------------------------------------------------*/
-
+} /*------------------------------------------------------------------------------------- # FONTS -------------------------------------------------------------------------------------*/
 :root {
   --handy: "HandyTimes";
   --manus: "Manus";
   --scary: "NoScary";
-}
-/*-------------------------------------------------------------------------------------
-  # STYLES GÉNÉRAUX
-  -------------------------------------------------------------------------------------*/
-
+} /*------------------------------------------------------------------------------------- # STYLES GÉNÉRAUX -------------------------------------------------------------------------------------*/
 * {
   box-sizing: border-box;
   margin: 0;
   border: 1px green solid;
 }
-
 body {
   overflow-x: hidden;
   height: 100%;
 }
-
 h1 {
   font-family: var(--scary);
   font-size: 9vmax;
   text-align: center;
   color: var(--lightgrey);
 }
-
 span {
   position: absolute;
   text-align: center;
   font-size: 3vw;
   font-family: var(--handy);
 }
-
 .text {
   position: absolute;
   text-align: center;
   font-size: 3vw;
   font-family: var(--handy);
 }
-
 ul,
 li {
   display: none;
   opacity: 0;
 }
-
 ul.technique-gsap {
   background: rgba(0, 0, 0, 0.3);
   color: white;
@@ -95,15 +73,9 @@ ul.technique-gsap {
   top: 0;
   left: 0;
 }
-
 ul.technique-gsap li {
   margin: 5px 0;
-}
-
-/*-------------------------------------------------------------------------------------
-  # SECTION HEADER
-  -------------------------------------------------------------------------------------*/
-
+} /*------------------------------------------------------------------------------------- # SECTION HEADER -------------------------------------------------------------------------------------*/
 header {
   width: 100%;
   height: 100vh;
@@ -112,7 +84,6 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
 }
-
 header,
 .intro-credit {
   padding-left: 30px;
@@ -124,11 +95,9 @@ header,
   position: relative;
   top: 60%;
 }
-
 .intro {
   font-size: 25px;
 }
-
 #fleche {
   width: 40%;
   position: absolute;
@@ -136,7 +105,6 @@ header,
   left: 50%;
   visibility: hidden;
 }
-
 #circle {
   width: 40%;
   position: absolute;
@@ -144,31 +112,22 @@ header,
   left: 49%;
   fill: var(--grey);
 }
-
 #svg2 {
   width: 10%;
   position: absolute;
   bottom: 22vh;
   left: 49%;
-}
-
-/*-------------------------------------------------------------------------------------
-  # SECTION CHAPITRE
-  -------------------------------------------------------------------------------------*/
-
+} /*------------------------------------------------------------------------------------- # SECTION CHAPITRE -------------------------------------------------------------------------------------*/
 section {
   width: 100%;
-  height: 100vh;
-  /* border: 1px red solid;*/
+  height: 100vh; /* border: 1px red solid;*/
   position: relative;
   box-sizing: border-box;
   overflow: hidden;
 }
-
 .is-scrolling {
   animation-play-state: running;
 }
-
 #chp02,
 #chp03,
 #chp04-5,
@@ -181,7 +140,6 @@ section {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-
 @keyframes exterieur-wagon {
   from {
     background-position: 0 0;
@@ -190,44 +148,32 @@ section {
     background-position: -5000px 0;
   }
 }
-
 #progressBar {
   position: absolute;
   bottom: 0;
   fill: var(--white);
   z-index: 1;
 }
-
 .progres,
 .progres-black {
   fill: transparent;
 }
-
 .progres {
   stroke: var(--white);
   stroke-width: 2px;
 }
-
 .progres-black {
   stroke: var(--black);
   stroke-width: 2px;
-}
-
-/*-------------------------------------------------------------------------------------
-  # CHAPITRE 1
-  -------------------------------------------------------------------------------------*/
-
+} /*------------------------------------------------------------------------------------- # CHAPITRE 1 -------------------------------------------------------------------------------------*/
 .chp01 {
   color: var(--dark);
   left: 0;
   right: 0;
 }
-
 #chp01 {
   background-image: linear-gradient(var(--white), 30%, var(--black));
-}
-
-/*change opacity (change scene) with gsap*/
+} /*change opacity (change scene) with gsap*/
 .debut {
   position: absolute;
   aspect-ratio: 450/462;
@@ -242,7 +188,6 @@ section {
   animation-iteration-count: infinite;
   animation-timing-function: steps(50);
 }
-
 @keyframes yeux {
   from {
     background-position: 0 0;
@@ -250,9 +195,7 @@ section {
   to {
     background-position: -23100px 0;
   }
-}
-
-/*change opacity (change scene) with gsap*/
+} /*change opacity (change scene) with gsap*/
 #ghost {
   opacity: 0;
   position: absolute;
@@ -268,7 +211,6 @@ section {
   animation-iteration-count: infinite;
   animation-timing-function: steps(50);
 }
-
 @keyframes ghost {
   from {
     background-position: 0 0;
@@ -276,18 +218,14 @@ section {
   to {
     background-position: 5000% 0;
   }
-}
-
-/*change opacity (change scene) with gsap*/
+} /*change opacity (change scene) with gsap*/
 .yeux-fille-ferme {
   opacity: 0;
   position: absolute;
   max-width: 50%;
   bottom: 20vh;
   left: 25%;
-}
-
-/*change opacity (change scene) with gsap*/
+} /*change opacity (change scene) with gsap*/
 .yeux-fille-ouvert {
   opacity: 0;
   position: absolute;
@@ -300,41 +238,30 @@ section {
   position: absolute;
   width: 10%;
 }
-
 .g1 {
   left: 43%;
   top: 50%;
 }
-
 .g2 {
   right: 20%;
   top: 30%;
 }
-
 .g3 {
   bottom: 30%;
   left: 20%;
-}
-
-/*-------------------------------------------------------------------------------------
-  # CHAPITRE 2
-  -------------------------------------------------------------------------------------*/
-
+} /*------------------------------------------------------------------------------------- # CHAPITRE 2 -------------------------------------------------------------------------------------*/
 .chp02 {
   color: var(--white);
   left: 0;
   right: 0;
 }
-
 .wagon-debut {
   background-image: url(../assets/img/img_arriere_plan/wagon.png);
   background-size: cover;
   height: 100%;
   background-position: 0% 100%;
   background-repeat: no-repeat;
-}
-
-/*change opacity (change scene) with gsap*/
+} /*change opacity (change scene) with gsap*/
 .fille-coucher {
   position: absolute;
   min-width: 20vmin;
@@ -342,7 +269,6 @@ section {
   top: 40vh;
   left: 30vw;
 }
-
 .fille-debout {
   opacity: 0;
   position: absolute;
@@ -350,19 +276,13 @@ section {
   max-width: 30vmax;
   bottom: -20vh;
   left: 60vmin;
-}
-
-/*-------------------------------------------------------------------------------------
-  # CHAPITRE 3
-  -------------------------------------------------------------------------------------*/
-
+} /*------------------------------------------------------------------------------------- # CHAPITRE 3 -------------------------------------------------------------------------------------*/
 .chp03 {
   color: var(--white);
   left: 0;
   right: 0;
   z-index: 2;
-}
-/*change opacity (change scene) with gsap*/
+} /*change opacity (change scene) with gsap*/
 .wagon-coin {
   background-image: url(../assets/img/img_arriere_plan/wagon_coin.png);
   background-size: cover;
@@ -370,14 +290,12 @@ section {
   background-position: 0 100%;
   background-repeat: no-repeat;
 }
-
 .regard-droit {
   position: absolute;
   max-width: 70vmax;
   bottom: 0;
   left: 0;
 }
-
 .porte-fond {
   opacity: 0;
   background-image: url(../assets/img/img_arriere_plan/arriere_plan_porte.jpg);
@@ -386,7 +304,6 @@ section {
   background-position: 0 100%;
   background-repeat: no-repeat;
 }
-
 .ghost-porte {
   opacity: 0;
   position: absolute;
@@ -394,7 +311,6 @@ section {
   left: 30vw;
   bottom: 0;
 }
-
 .porte {
   opacity: 0;
   background-image: url(../assets/img/img_elements_visuels/porte.png);
@@ -407,33 +323,27 @@ section {
   z-index: 1;
   left: 20vw;
 }
-
 .bruitage {
   opacity: 0;
   position: absolute;
   max-width: 20vmax;
 }
-
 .bam-1 {
   top: 0%;
   left: 0%;
 }
-
 .bam-2 {
   bottom: 0;
   right: 10%;
 }
-
 .thud-1 {
   top: 45%;
   left: 0;
 }
-
 .thud-2 {
   top: 0;
   right: 0;
 }
-
 .regard-gauche {
   opacity: 0;
   position: absolute;
@@ -441,7 +351,6 @@ section {
   bottom: 0;
   left: 0;
 }
-
 .bras-fille {
   opacity: 0;
   position: absolute;
@@ -449,12 +358,7 @@ section {
   left: 30vw;
   bottom: 0;
   z-index: 1;
-}
-
-/*-------------------------------------------------------------------------------------
-  # CHAPITRE 4-6 fond
-  -------------------------------------------------------------------------------------*/
-
+} /*------------------------------------------------------------------------------------- # CHAPITRE 4-6 fond -------------------------------------------------------------------------------------*/
 #chp04,
 #chp05 {
   background-image: url(../assets/img/img_arriere_plan/arriere_plan_tombee.jpg);
@@ -463,14 +367,12 @@ section {
   height: 100vh;
   background-position: 50%;
 }
-
 .tomber {
   position: absolute;
   max-width: 30vmax;
   top: 0;
   left: 40vw;
 }
-
 #fille-cours {
   position: absolute;
   aspect-ratio: 640/900;
@@ -483,7 +385,6 @@ section {
   animation-iteration-count: infinite;
   animation-timing-function: steps(4);
 }
-
 @keyframes fille {
   from {
     background-position: 0 0;
@@ -491,31 +392,23 @@ section {
   to {
     background-position: -400% 0;
   }
-}
-
-/*-------------------------------------------------------------------------------------
-  # CHAPITRE 4 (4-5)
-  -------------------------------------------------------------------------------------*/
-
+} /*------------------------------------------------------------------------------------- # CHAPITRE 4 (4-5) -------------------------------------------------------------------------------------*/
 #trace {
   position: absolute;
   bottom: 0;
   fill: transparent;
   transform: scale(30%);
 }
-
 .chp04 {
   color: var(--white);
   top: 50vh;
   right: 20vw;
 }
-
 .paper {
   position: absolute;
   width: 100%;
   top: 0;
 }
-
 .wagon-chambre {
   background-image: url(../assets/img/img_arriere_plan/wagon_chambre_enfance.png);
   background-size: cover;
@@ -523,28 +416,24 @@ section {
   background-position: 20%;
   background-repeat: no-repeat;
 }
-
 .peluche {
   position: absolute;
   width: 5%;
   bottom: 10vh;
   right: 35vw;
 }
-
 .cube {
   position: absolute;
   width: 5%;
   top: 20vh;
   left: 20vw;
 }
-
 .train-jouet {
   position: absolute;
   width: 10%;
   bottom: 0;
   right: 30vw;
 }
-
 .fille-joue-block {
   opacity: 0;
   position: absolute;
@@ -552,7 +441,6 @@ section {
   bottom: 0;
   right: 0;
 }
-
 .fille-joue-peluche {
   opacity: 0;
   position: absolute;
@@ -560,7 +448,6 @@ section {
   bottom: 0;
   left: 0;
 }
-
 .fille-curieuse {
   opacity: 0;
   position: absolute;
@@ -568,95 +455,73 @@ section {
   bottom: 20vh;
   right: 10vw;
 }
-
 .mere-assise {
   opacity: 0;
   position: absolute;
   width: 40%;
   bottom: 0;
   left: 30vw;
-}
-
-/*-------------------------------------------------------------------------------------
-  # CHAPITRE 4-5
-  -------------------------------------------------------------------------------------*/
-
+} /*------------------------------------------------------------------------------------- # CHAPITRE 4-5 -------------------------------------------------------------------------------------*/
 .chp04-5 {
   color: var(--white);
   left: 0;
   right: 0;
 }
-
 .train-tombe {
   position: absolute;
   width: 10%;
   right: 30vw;
   top: 20vh;
 }
-
 .peluche-tombe {
   position: absolute;
   width: 5%;
   left: 30vw;
   top: 40vh;
 }
-
 .cube-tombe {
   position: absolute;
 }
-
 .c1 {
   width: 5%;
   top: 20vh;
   right: 20vw;
 }
-
 .c2 {
   width: 20%;
   bottom: 0;
   left: 20vw;
 }
-
 .c3 {
   width: 10%;
   top: 10vh;
   left: 10vw;
 }
-
 .etoile-tombe {
   position: absolute;
   width: 100%;
   top: 0;
-}
-
-/*-------------------------------------------------------------------------------------
-  # CHAPITRE 5 (5-5)
-  -------------------------------------------------------------------------------------*/
-
+} /*------------------------------------------------------------------------------------- # CHAPITRE 5 (5-5) -------------------------------------------------------------------------------------*/
 .chp05 {
   color: var(--white);
   top: 50vh;
   right: 20vw;
 }
-
 .t2 {
   color: var(--white);
   top: 60vh;
   right: 10vw;
 }
-
 .t3 {
   color: var(--white);
   top: 70vh;
   right: 30vw;
 }
-
 .chp05-5 {
   color: var(--white);
   right: 0;
   left: 0;
 }
-
 #aDessin {
   fill: transparent;
   position: absolute;
@@ -666,18 +531,15 @@ section {
   width: 5vw;
   transform: rotate(70deg);
 }
-
 .dessin-corps,
 .dessin-trait {
   fill: hidden;
 }
-
 .dessin-corps,
 .dessin-trait {
   stroke: var(--grey);
   stroke-width: 10px;
 }
-
 .wagon-ecole {
   background-image: url(../assets/img/img_arriere_plan/wagon_ecole.png);
   background-size: cover;
@@ -685,7 +547,6 @@ section {
   background-position: 20%;
   background-repeat: no-repeat;
 }
-
 .fille-chante {
   opacity: 0;
   position: absolute;
@@ -693,7 +554,6 @@ section {
   bottom: 0;
   right: 0;
 }
-
 .mere-lit {
   opacity: 0;
   position: absolute;
@@ -701,7 +561,6 @@ section {
   bottom: 0;
   right: 30vw;
 }
-
 .fille-livre {
   opacity: 0;
   position: absolute;
@@ -709,7 +568,6 @@ section {
   bottom: 0;
   left: 5vw;
 }
-
 .fille-devoir {
   opacity: 0;
   position: absolute;
@@ -717,32 +575,24 @@ section {
   bottom: 10vh;
   right: 55vw;
 }
-
 .note-musique {
   position: absolute;
   width: 60%;
   top: 0;
   right: 10vw;
-}
-
-/*-------------------------------------------------------------------------------------
-  # CHAPITRE 6
-  -------------------------------------------------------------------------------------*/
-
+} /*------------------------------------------------------------------------------------- # CHAPITRE 6 -------------------------------------------------------------------------------------*/
 .chp06 {
   color: var(--white);
   left: 0;
   right: 0;
   z-index: 1;
 }
-
 #chp06 {
   background-image: url(../assets/img/img_arriere_plan/arriere_plan_porte.jpg);
   background-position: 20%;
   background-size: cover;
   background-repeat: no-repeat;
 }
-
 .porte-fin {
   background-image: url(../assets/img/img_elements_visuels/porte.png);
   background-repeat: no-repeat;
@@ -751,28 +601,20 @@ section {
   position: relative;
   left: 25vw;
 }
-
 .bras-fille-porte-fin {
   position: absolute;
   width: 35%;
   bottom: 0;
   right: 25vw;
-}
-
-/*-------------------------------------------------------------------------------------
-  # CHAPITRE 7
-  -------------------------------------------------------------------------------------*/
-
+} /*------------------------------------------------------------------------------------- # CHAPITRE 7 -------------------------------------------------------------------------------------*/
 .chp07 {
   color: var(--white);
   left: 0;
   right: 0;
 }
-
 #chp07 {
   background-image: linear-gradient(var(--darkgrey), 20%, var(--white));
 }
-
 #ghost-big {
   opacity: 0;
   position: absolute;
@@ -788,7 +630,6 @@ section {
   animation-iteration-count: infinite;
   animation-timing-function: steps(50);
 }
-
 @keyframes ghost {
   from {
     background-position: 0 0;
@@ -797,38 +638,29 @@ section {
     background-position: 5000% 0;
   }
 }
-
 .train {
   position: absolute;
   width: 60vw;
   bottom: 0;
   right: 20vw;
 }
-
 .bras-fille-train {
   position: absolute;
   width: 40vw;
   bottom: 0;
   right: 25vw;
-}
-
-/*-------------------------------------------------------------------------------------
-  # CHAPITRE 8
-  -------------------------------------------------------------------------------------*/
-
+} /*------------------------------------------------------------------------------------- # CHAPITRE 8 -------------------------------------------------------------------------------------*/
 .chp08 {
   color: var(--dark);
   left: 0;
   right: 0;
 }
-
 .yeux-fille-ouvert-fin {
   position: absolute;
   max-width: 50vw;
   bottom: 20vh;
   left: 25vw;
 }
-
 .mere-dos {
   opacity: 0;
   position: absolute;
@@ -836,7 +668,6 @@ section {
   bottom: 0;
   left: 10vw;
 }
-
 .bras-fille-fin {
   opacity: 0;
   position: absolute;
@@ -844,14 +675,12 @@ section {
   z-index: 1;
   bottom: 0;
 }
-
 .bras-mere {
   opacity: 0;
   position: absolute;
   width: 80vw;
   right: 0;
 }
-
 .derniere-visite {
   opacity: 0;
   position: absolute;
@@ -859,7 +688,6 @@ section {
   bottom: 0;
   left: 10vw;
 }
-
 .reunion {
   opacity: 0;
   background-image: url(../assets/img/img_personnages/mere_fille_reunion.jpg);
@@ -868,18 +696,12 @@ section {
   background-position: 50% 0;
   width: 100%;
   height: 100%;
-}
-
-/*-------------------------------------------------------------------------------------
-  # CHAPITRE 9
-  -------------------------------------------------------------------------------------*/
-
+} /*------------------------------------------------------------------------------------- # CHAPITRE 9 -------------------------------------------------------------------------------------*/
 .chp09 {
   color: var(--dark);
   left: 0;
   right: 0;
 }
-
 #chp09 {
   background-image: url(../assets/img/img_arriere_plan/nuage.jpg);
   background-repeat: no-repeat;
@@ -887,7 +709,6 @@ section {
   height: 100vh;
   background-position: 20%;
 }
-
 .gazon {
   background-size: contain;
   background-repeat: no-repeat;
@@ -896,7 +717,6 @@ section {
   position: relative;
   top: 60vh;
 }
-
 .tracks {
   background-image: url(../assets/img/img_arriere_plan/tracks.png);
   background-repeat: no-repeat;
@@ -905,12 +725,7 @@ section {
   position: relative;
   top: 20vh;
   left: 20vmax;
-}
-
-/*-------------------------------------------------------------------------------------
-  # SECTION FOOTER
-  -------------------------------------------------------------------------------------*/
-
+} /*------------------------------------------------------------------------------------- # SECTION FOOTER -------------------------------------------------------------------------------------*/
 .credit {
   background-image: url(../assets/img/img_arriere_plan/exterieur_wagon.jpg);
   padding: 30px;

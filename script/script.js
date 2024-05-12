@@ -6,26 +6,26 @@ document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(
     MotionPathPlugin,
     /* DrawSVGPlugin,
-    MorphSVGPlugin,*/
+      MorphSVGPlugin,*/
     ScrollTrigger
   );
 });
 
 /*-------------------------------------------------------------------------------------
-  # HEARDER
-  -------------------------------------------------------------------------------------*/
+    # HEARDER
+    -------------------------------------------------------------------------------------*/
 
 gsap
   .timeline()
   .to("#circle", {
     /*morphSVG: "#fleche",
-    duration: 1.5,*/
+      duration: 1.5,*/
   })
   .fromTo("#circle", { y: 10 }, { y: 30, repeat: -1, yoyo: true });
 
 /*-------------------------------------------------------------------------------------
-  # SPRITESHEET
-  -------------------------------------------------------------------------------------*/
+    # SPRITESHEET
+    -------------------------------------------------------------------------------------*/
 
 let animYeux = document.querySelector(".debut");
 let animGhost = document.querySelector("#ghost");
@@ -45,15 +45,15 @@ window.addEventListener("scroll", () => {
 });
 
 /*-------------------------------------------------------------------------------------
-  # ANIMATION CHAPITRE 1
-  -------------------------------------------------------------------------------------*/
+    # ANIMATION CHAPITRE 1
+    -------------------------------------------------------------------------------------*/
 
 const timeChp1 = gsap.timeline({
   scrollTrigger: {
     pin: true,
     pinSpacing: true,
     scrub: false,
-    markers: true,
+    markers: false,
     start: "top top",
     end: "bottom top",
     trigger: "#chp01",
@@ -139,15 +139,15 @@ timeChp1
   .paused(true);
 
 /*-------------------------------------------------------------------------------------
-  # ANIMATION CHAPITRE 2
-  -------------------------------------------------------------------------------------*/
+    # ANIMATION CHAPITRE 2
+    -------------------------------------------------------------------------------------*/
 
 const timeChp2 = gsap.timeline({
   scrollTrigger: {
     pin: true,
     pinSpacing: true,
     scrub: false,
-    markers: true,
+    markers: false,
     start: "top top",
     end: "bottom top",
     toggleActions: "play none reset play",
@@ -169,15 +169,15 @@ timeChp2
   .paused(true);
 
 /*-------------------------------------------------------------------------------------
-  # ANIMATION CHAPITRE 3
-  -------------------------------------------------------------------------------------*/
+    # ANIMATION CHAPITRE 3
+    -------------------------------------------------------------------------------------*/
 
 const timeChp3 = gsap.timeline({
   scrollTrigger: {
     pin: true,
     pinSpacing: true,
     scrub: false,
-    markers: true,
+    markers: false,
     start: "top top",
     end: "bottom top",
     trigger: "#chp03",
@@ -246,15 +246,15 @@ timeChp2
   .paused(true);
 
 /*-------------------------------------------------------------------------------------
-  # ANIMATION CHAPITRE 4
-  -------------------------------------------------------------------------------------*/
+    # ANIMATION CHAPITRE 4
+    -------------------------------------------------------------------------------------*/
 
 const timeChp4 = gsap.timeline({
   scrollTrigger: {
     pin: true,
     pinSpacing: true,
     scrub: 1,
-    markers: true,
+    markers: false,
     start: "top top",
     end: "bottom top",
     trigger: "#chp04",
@@ -269,15 +269,15 @@ timeChp4
   .to(".chp04", { y: "-30vh", ease: "none" }, "<0")
   .paused(true);
 /*-------------------------------------------------------------------------------------
-  # ANIMATION CHAPITRE 4-5
-  -------------------------------------------------------------------------------------*/
+    # ANIMATION CHAPITRE 4-5
+    -------------------------------------------------------------------------------------*/
 
 const timeChp4_5 = gsap.timeline({
   scrollTrigger: {
     pin: true,
     pinSpacing: true,
     scrub: false,
-    markers: true,
+    markers: false,
     start: "top top",
     end: "bottom top",
     toggleActions: "play none reset play",
@@ -427,8 +427,8 @@ timeChp4_5
   .paused(true);
 
 /*-------------------------------------------------------------------------------------
-  # ANIMATION CHAPITRE 5
-  -------------------------------------------------------------------------------------*/
+    # ANIMATION CHAPITRE 5
+    -------------------------------------------------------------------------------------*/
 
 const speed = 100;
 
@@ -437,7 +437,7 @@ const timeChp5 = gsap.timeline({
     pin: true,
     pinSpacing: true,
     scrub: 1,
-    markers: true,
+    markers: false,
     start: "top top",
     end: "bottom top",
     trigger: "#chp05",
@@ -491,15 +491,15 @@ gsap.to(".etoile-tombe", {
 });
 
 /*-------------------------------------------------------------------------------------
-  # ANIMATION CHAPITRE 5-5
-  -------------------------------------------------------------------------------------*/
+    # ANIMATION CHAPITRE 5-5
+    -------------------------------------------------------------------------------------*/
 
 const timeChp5_5 = gsap.timeline({
   scrollTrigger: {
     pin: true,
     pinSpacing: true,
     scrub: false,
-    markers: true,
+    markers: false,
     start: "top top",
     end: "bottom top",
     toggleActions: "play complete reset play",
@@ -636,15 +636,15 @@ gsap.fromTo(
 );
 
 /*-------------------------------------------------------------------------------------
-  # ANIMATION CHAPITRE 6
-  -------------------------------------------------------------------------------------*/
+    # ANIMATION CHAPITRE 6
+    -------------------------------------------------------------------------------------*/
 
 const timeChp6 = gsap.timeline({
   scrollTrigger: {
     pin: true,
     pinSpacing: true,
     scrub: true,
-    markers: true,
+    markers: false,
     start: "top top",
     end: "bottom top",
     trigger: "#chp06",
@@ -659,15 +659,15 @@ timeChp6.to(".bras-fille-porte-fin", {
 });
 
 /*-------------------------------------------------------------------------------------
-  # ANIMATION CHAPITRE 7
-  -------------------------------------------------------------------------------------*/
+    # ANIMATION CHAPITRE 7
+    -------------------------------------------------------------------------------------*/
 
 const timeChp7 = gsap.timeline({
   scrollTrigger: {
     pin: true,
     pinSpacing: true,
     scrub: true,
-    markers: true,
+    markers: false,
     start: "top top",
     end: "bottom top",
     trigger: "#chp07",
@@ -711,15 +711,15 @@ timeChp7.fromTo(
 );
 
 /*-------------------------------------------------------------------------------------
-  # ANIMATION CHAPITRE 8
-  -------------------------------------------------------------------------------------*/
+    # ANIMATION CHAPITRE 8
+    -------------------------------------------------------------------------------------*/
 
 const timeChp8 = gsap.timeline({
   scrollTrigger: {
     pin: true,
     pinSpacing: true,
     toggleActions: "play complete reset reset",
-    markers: true,
+    markers: false,
     start: "top top",
     end: "bottom top",
     trigger: "#chp08",
@@ -834,8 +834,8 @@ timeChp8
   .paused(true);
 
 /*-------------------------------------------------------------------------------------
-  # ANIMATION CHAPITRE 9
-  -------------------------------------------------------------------------------------*/
+    # ANIMATION CHAPITRE 9
+    -------------------------------------------------------------------------------------*/
 
 const speedElement = 100;
 
@@ -845,7 +845,7 @@ const timeChp9 = gsap.timeline({
     pin: true,
     pinSpacing: true,
     scrub: true,
-    markers: true,
+    markers: false,
     start: "top top",
     end: "bottom top",
     trigger: "#chp09",
