@@ -173,23 +173,23 @@ section {
 .debut {
   position: absolute;
   aspect-ratio: 450/462;
-  bottom: 20%;
+  bottom: 20vh;
   right: 35vw;
-  background-image: url(../assets/img/img_personnages/spritesheet_yeux_griboulli.png);
+  background-image: url(../assets/img/img_personnages/spritesheet_yeux_griboulli_crop.png);
   background-repeat: no-repeat;
-  background-size: 23100px 100%;
+  background-size: 5544px 100%;
   width: 462vw;
   animation-name: yeux;
   animation-duration: 1s;
   animation-iteration-count: infinite;
-  animation-timing-function: steps(50);
+  animation-timing-function: steps(12);
 }
 @keyframes yeux {
   from {
     background-position: 0 0;
   }
   to {
-    background-position: -23100px 0;
+    background-position: -5544px 0;
   }
 }
 #ghost {

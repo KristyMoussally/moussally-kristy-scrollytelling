@@ -6,11 +6,12 @@ Page Speed Insights - Rapport du 12 mai 2024, 12:52:00.
 
 ## Problème #1
 
-### Largest Contentful Paint element (speed load)
+### Chargement du contenue médias
 
 ### Action concrète pour résoudre le problème
 
 - Réduire le poids des médias en mettant les images en lazy load
+- Mettre cet méthode dans tous les images retrouvés dans le html
 - Donc pas tous les images s'activent en même temps.
 
 ### Résultat
@@ -19,12 +20,13 @@ Page Speed Insights - Rapport du 12 mai 2024, 12:52:00.
 
 ## Problème #2
 
-### third-party code
+### Les codes exterieurs (css et javascript)
 
 ### Action concrète pour résoudre le problème
 
 - Réduire / simplifier les fichiers javascript, css et html
 - Enlevé les codes pas nécéssaires
+- Ex.: les fonts pas utilisés, les bordures sur tous les éléments,...
 
 ### Résultat
 
@@ -33,11 +35,16 @@ Page Speed Insights - Rapport du 12 mai 2024, 12:52:00.
 
 ## Problème #3
 
-### third-party code
+### Chargement des ressources
 
 ### Action concrète pour résoudre le problème
 
+- Enlevé complètement les commentaires et code inutiles
+- enlevé les markers: false
+
 ### Résultat
+
+- Le performance s'est amélioré, mais le Chargement du contenue grands médias est plus critique.
 
 ## Rapport projet ScrollyTelling après optimisation
 
