@@ -5,8 +5,8 @@
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(
     MotionPathPlugin,
-    DrawSVGPlugin,
-    MorphSVGPlugin,
+    /* DrawSVGPlugin,
+    MorphSVGPlugin,*/
     ScrollTrigger
   );
 });
@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 gsap
   .timeline()
   .to("#circle", {
-    morphSVG: "#fleche",
-    duration: 1.5,
+    /*morphSVG: "#fleche",
+    duration: 1.5,*/
   })
   .fromTo("#circle", { y: 10 }, { y: 30, repeat: -1, yoyo: true });
 
@@ -127,10 +127,10 @@ timeChp1
   .fromTo(
     ".progres",
     {
-      drawSVG: "0% 0%",
+      /*  drawSVG: "0% 0%",*/
     },
     {
-      drawSVG: "0% 100%",
+      /* drawSVG: "0% 100%",*/
       duration: 15,
       ease: "power1",
     },
@@ -234,10 +234,10 @@ timeChp2
   .fromTo(
     ".progres",
     {
-      drawSVG: "0% 0%",
+      /*  drawSVG: "0% 0%",*/
     },
     {
-      drawSVG: "0% 100%",
+      /*  drawSVG: "0% 100%",*/
       duration: 30,
       ease: "power1",
     },
@@ -266,6 +266,7 @@ timeChp4.pause();
 timeChp4
   .to(".paper", { y: "-100vh", ease: "none" })
   .to(".v1", { y: "100vh", ease: "none" }, "<0")
+  .to(".chp04", { y: "-30vh", ease: "none" }, "<0")
   .paused(true);
 /*-------------------------------------------------------------------------------------
   # ANIMATION CHAPITRE 4-5
@@ -414,10 +415,10 @@ timeChp4_5
   .fromTo(
     ".progres",
     {
-      drawSVG: "0% 0%",
+      /* drawSVG: "0% 0%",*/
     },
     {
-      drawSVG: "0% 100%",
+      /*  drawSVG: "0% 100%",*/
       duration: 15,
       ease: "power1",
     },
@@ -435,7 +436,7 @@ const timeChp5 = gsap.timeline({
   scrollTrigger: {
     pin: true,
     pinSpacing: true,
-    scrub: true,
+    scrub: 1,
     markers: true,
     start: "top top",
     end: "bottom top",
@@ -444,7 +445,7 @@ const timeChp5 = gsap.timeline({
 });
 
 timeChp5
-  .to(".v2", { y: "250%", ease: "none" }, "<0")
+  .to(".v2", { y: "300%", ease: "none" }, "<0")
   .to(
     ".c1",
     {
@@ -454,7 +455,7 @@ timeChp5
     0.06
   )
   .to(".c2", { y: -100 * speed, ease: "power1.in" }, 0.03)
-  .to(".c3", { y: -10 * speed }, 0.05)
+  .to(".c3", { y: -10 * speed }, 0.03)
   .to(".peluche-tombe", { y: 9 * speed }, 0.02)
   .to(".train-tombe", { y: 20 * speed }, 0.03)
   .to(".chp05", { x: 3 * speed, y: 1 * speed }, 0.03)
@@ -565,20 +566,20 @@ timeChp5_5
   .fromTo(
     ".dessin-corps",
     {
-      drawSVG: "0% 0%",
+      /* drawSVG: "0% 0%",*/
     },
     {
-      drawSVG: "0% 100%",
+      /* drawSVG: "0% 100%",*/
       duration: 1,
     }
   )
   .fromTo(
     ".dessin-trait",
     {
-      drawSVG: "0% 0%",
+      /*  drawSVG: "0% 0%",*/
     },
     {
-      drawSVG: "0% 100%",
+      /*  drawSVG: "0% 100%",*/
       duration: 1,
     }
   )
@@ -617,10 +618,10 @@ timeChp5_5
   .fromTo(
     ".progres",
     {
-      drawSVG: "0% 0%",
+      /*  drawSVG: "0% 0%",*/
     },
     {
-      drawSVG: "0% 100%",
+      /*  drawSVG: "0% 100%",*/
       duration: 15,
       ease: "power1",
     },
@@ -821,10 +822,10 @@ timeChp8
   .fromTo(
     ".progres-black",
     {
-      drawSVG: "0% 0%",
+      /*   drawSVG: "0% 0%",*/
     },
     {
-      drawSVG: "0% 100%",
+      /*  drawSVG: "0% 100%",*/
       duration: 25,
       ease: "power1",
     },

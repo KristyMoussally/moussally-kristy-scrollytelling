@@ -73,6 +73,11 @@ span {
   font-family: var(--handy);
 }
 
+ul,
+li {
+  display: none;
+}
+
 ul.technique-gsap {
   background: rgba(0, 0, 0, 0.3);
   color: white;
@@ -153,7 +158,7 @@ header,
 section {
   width: 100%;
   height: 100vh;
-  border: 1px red solid;
+  /* border: 1px red solid;*/
   position: relative;
   box-sizing: border-box;
   overflow: hidden;
@@ -219,7 +224,6 @@ section {
 
 #chp01 {
   background-image: linear-gradient(var(--white), 30%, var(--black));
-  background-size: 200%;
 }
 
 /*change opacity (change scene) with gsap*/
@@ -227,11 +231,11 @@ section {
   position: absolute;
   aspect-ratio: 450/462;
   bottom: 20%;
-  right: 40vw;
+  right: 35vw;
   background-image: url(../assets/img/img_personnages/spritesheet_yeux_griboulli.png);
   background-repeat: no-repeat;
   background-size: 23100px 100%;
-  width: 462px;
+  width: 462vw;
   animation-name: yeux;
   animation-duration: 1s;
   animation-iteration-count: infinite;
@@ -252,9 +256,9 @@ section {
   opacity: 0;
   position: absolute;
   aspect-ratio: 1/1;
-  width: 35%;
+  width: 502vw;
   bottom: 0;
-  left: 32%;
+  left: 32vw;
   right: 0;
   background-image: url(../assets/img/img_personnages/spritesheet_fantome.png);
   background-size: 5000% 100%;
@@ -325,7 +329,7 @@ section {
   background-image: url(../assets/img/img_arriere_plan/wagon.png);
   background-size: cover;
   height: 100%;
-  background-position: 20% 50%;
+  background-position: 0% 100%;
   background-repeat: no-repeat;
 }
 
@@ -334,8 +338,8 @@ section {
   position: absolute;
   min-width: 20vmin;
   max-width: 30vmax;
-  top: 50vh;
-  left: 60vh;
+  top: 40vh;
+  left: 30vw;
 }
 
 .fille-debout {
@@ -343,7 +347,7 @@ section {
   position: absolute;
   min-width: 20vmin;
   max-width: 30vmax;
-  top: 30vmin;
+  bottom: -20vh;
   left: 60vmin;
 }
 
@@ -362,7 +366,7 @@ section {
   background-image: url(../assets/img/img_arriere_plan/wagon_coin.png);
   background-size: cover;
   height: 100%;
-  background-position: 20%;
+  background-position: 0 100%;
   background-repeat: no-repeat;
 }
 
@@ -378,7 +382,7 @@ section {
   background-image: url(../assets/img/img_arriere_plan/arriere_plan_porte.jpg);
   background-size: cover;
   height: 100%;
-  background-position: 20%;
+  background-position: 0 100%;
   background-repeat: no-repeat;
 }
 
@@ -386,7 +390,7 @@ section {
   opacity: 0;
   position: absolute;
   width: 35vw;
-  left: 30%;
+  left: 30vw;
   bottom: 0;
 }
 
@@ -441,7 +445,7 @@ section {
   opacity: 0;
   position: absolute;
   width: 30%;
-  left: 30%;
+  left: 30vw;
   bottom: 0;
   z-index: 1;
 }
@@ -463,7 +467,7 @@ section {
   position: absolute;
   max-width: 30vmax;
   top: 0;
-  right: 40%;
+  left: 40vw;
 }
 
 #fille-cours {
@@ -501,15 +505,14 @@ section {
 
 .chp04 {
   color: var(--white);
-  top: 50%;
-  right: 20%;
+  top: 50vh;
+  right: 20vw;
 }
 
 .paper {
   position: absolute;
   width: 100%;
   top: 0;
-  right: 0%;
 }
 
 .wagon-chambre {
@@ -523,22 +526,22 @@ section {
 .peluche {
   position: absolute;
   width: 5%;
-  bottom: 10%;
-  right: 35%;
+  bottom: 10vh;
+  right: 35vw;
 }
 
 .cube {
   position: absolute;
   width: 5%;
-  top: 20%;
-  left: 20%;
+  top: 20vh;
+  left: 20vw;
 }
 
 .train-jouet {
   position: absolute;
   width: 10%;
-  bottom: 0%;
-  right: 30%;
+  bottom: 0;
+  right: 30vw;
 }
 
 .fille-joue-block {
@@ -546,7 +549,7 @@ section {
   position: absolute;
   width: 30%;
   bottom: 0;
-  right: 0%;
+  right: 0;
 }
 
 .fille-joue-peluche {
@@ -554,15 +557,15 @@ section {
   position: absolute;
   width: 30%;
   bottom: 0;
-  left: 0%;
+  left: 0;
 }
 
 .fille-curieuse {
   opacity: 0;
   position: absolute;
   width: 30%;
-  bottom: 20%;
-  right: 10%;
+  bottom: 20vh;
+  right: 10vw;
 }
 
 .mere-assise {
@@ -570,7 +573,7 @@ section {
   position: absolute;
   width: 40%;
   bottom: 0;
-  left: 30%;
+  left: 30vw;
 }
 
 /*-------------------------------------------------------------------------------------
@@ -580,21 +583,21 @@ section {
 .chp04-5 {
   color: var(--white);
   left: 0;
-  right: 0%;
+  right: 0;
 }
 
 .train-tombe {
   position: absolute;
   width: 10%;
-  right: 30%;
-  top: 20%;
+  right: 30vw;
+  top: 20vh;
 }
 
 .peluche-tombe {
   position: absolute;
   width: 5%;
-  left: 20%;
-  top: 40%;
+  left: 30vw;
+  top: 40vh;
 }
 
 .cube-tombe {
@@ -603,20 +606,20 @@ section {
 
 .c1 {
   width: 5%;
-  top: 20%;
-  right: 20%;
+  top: 20vh;
+  right: 20vw;
 }
 
 .c2 {
   width: 20%;
-  bottom: 0%;
-  left: 20%;
+  bottom: 0;
+  left: 20vw;
 }
 
 .c3 {
   width: 10%;
-  top: 10%;
-  left: 10%;
+  top: 10vh;
+  left: 10vw;
 }
 
 .etoile-tombe {
@@ -631,20 +634,20 @@ section {
 
 .chp05 {
   color: var(--white);
-  top: 50%;
-  right: 20%;
+  top: 50vh;
+  right: 20vw;
 }
 
 .t2 {
   color: var(--white);
-  top: 60%;
-  right: 10%;
+  top: 60vh;
+  right: 10vw;
 }
 
 .t3 {
   color: var(--white);
-  top: 70%;
-  right: 30%;
+  top: 70vh;
+  right: 30vw;
 }
 
 .chp05-5 {
@@ -686,7 +689,7 @@ section {
   opacity: 0;
   position: absolute;
   width: 30%;
-  bottom: 0%;
+  bottom: 0;
   right: 0;
 }
 
@@ -694,31 +697,31 @@ section {
   opacity: 0;
   position: absolute;
   width: 25%;
-  bottom: 0%;
-  right: 30%;
+  bottom: 0;
+  right: 30vw;
 }
 
 .fille-livre {
   opacity: 0;
   position: absolute;
   width: 15%;
-  bottom: 0%;
-  left: 5%;
+  bottom: 0;
+  left: 5vw;
 }
 
 .fille-devoir {
   opacity: 0;
   position: absolute;
   width: 30%;
-  bottom: 10%;
-  right: 55%;
+  bottom: 10vh;
+  right: 55vw;
 }
 
 .note-musique {
   position: absolute;
   width: 60%;
   top: 0;
-  right: 10%;
+  right: 10vw;
 }
 
 /*-------------------------------------------------------------------------------------
@@ -743,7 +746,7 @@ section {
   background-image: url(../assets/img/img_elements_visuels/porte.png);
   background-repeat: no-repeat;
   background-size: contain;
-  height: 100vh;
+  height: 100%;
   position: relative;
   left: 25vw;
 }
@@ -752,7 +755,7 @@ section {
   position: absolute;
   width: 35%;
   bottom: 0;
-  right: 25%;
+  right: 25vw;
 }
 
 /*-------------------------------------------------------------------------------------
@@ -773,9 +776,9 @@ section {
   opacity: 0;
   position: absolute;
   aspect-ratio: 1/1;
-  width: 40%;
+  width: 40vw;
   bottom: 0;
-  left: 32%;
+  left: 32vw;
   right: 0;
   background-image: url(../assets/img/img_personnages/spritesheet_fantome.png);
   background-size: 5000% 100%;
@@ -796,16 +799,16 @@ section {
 
 .train {
   position: absolute;
-  width: 60%;
+  width: 60vw;
   bottom: 0;
-  right: 20%;
+  right: 20vw;
 }
 
 .bras-fille-train {
   position: absolute;
-  width: 40%;
+  width: 40vw;
   bottom: 0;
-  right: 25%;
+  right: 25vw;
 }
 
 /*-------------------------------------------------------------------------------------
@@ -822,21 +825,21 @@ section {
   position: absolute;
   max-width: 50vw;
   bottom: 20vh;
-  left: 25%;
+  left: 25vw;
 }
 
 .mere-dos {
   opacity: 0;
   position: absolute;
-  width: 80%;
+  width: 80vw;
   bottom: 0;
-  left: 10%;
+  left: 10vw;
 }
 
 .bras-fille-fin {
   opacity: 0;
   position: absolute;
-  width: 80%;
+  width: 80vw;
   z-index: 1;
   bottom: 0;
 }
@@ -844,16 +847,16 @@ section {
 .bras-mere {
   opacity: 0;
   position: absolute;
-  width: 80%;
+  width: 80vw;
   right: 0;
 }
 
 .derniere-visite {
   opacity: 0;
   position: absolute;
-  width: 80%;
+  width: 80vw;
   bottom: 0;
-  left: 10%;
+  left: 10vw;
 }
 
 .reunion {
@@ -890,46 +893,17 @@ section {
   width: 60vw;
   height: 40vh;
   position: relative;
-  top: 60%;
+  top: 60vh;
 }
 
 .tracks {
   background-image: url(../assets/img/img_arriere_plan/tracks.png);
   background-repeat: no-repeat;
   background-size: contain;
-  height: 40%;
+  height: 40vw;
   position: relative;
-  top: 20%;
+  top: 20vh;
   left: 20vmax;
-}
-
-/*-------------------------------------------------------------------------------------
-  # srpitesheet html
-  -------------------------------------------------------------------------------------*/
-
-#fille {
-  aspect-ratio: 640/900;
-  background-image: url(../assets/img/img_personnages/spritesheet_fille.png);
-  background-position: 400%;
-  background-size: cover;
-  animation-name: fille;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-timing-function: steps(4);
-}
-
-@keyframes fille {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -400% 0;
-  }
-}
-
-.sprite {
-  width: 100%;
-  height: 500vh;
 }
 
 /*-------------------------------------------------------------------------------------
