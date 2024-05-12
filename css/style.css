@@ -76,6 +76,7 @@ span {
 ul,
 li {
   display: none;
+  opacity: 0;
 }
 
 ul.technique-gsap {
