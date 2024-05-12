@@ -385,7 +385,7 @@ section {
 .ghost-porte {
   opacity: 0;
   position: absolute;
-  width: 30%;
+  width: 35vw;
   left: 30%;
   bottom: 0;
 }
@@ -635,18 +635,17 @@ section {
   right: 20%;
 }
 
-.t2{
+.t2 {
   color: var(--white);
   top: 60%;
   right: 10%;
 }
 
-.t3{
+.t3 {
   color: var(--white);
   top: 70%;
   right: 30%;
 }
-
 
 .chp05-5 {
   color: var(--white);

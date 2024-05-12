@@ -123,19 +123,20 @@ timeChp1
   )
   .paused(true);
 
-timeChp1.fromTo(
-  ".progres",
-  {
-    drawSVG: "0% 0%",
-  },
-  {
-    drawSVG: "0% 100%",
-    duration: 15,
-    ease: "power1",
-  },
-  0
-)
-.paused(true);
+timeChp1
+  .fromTo(
+    ".progres",
+    {
+      drawSVG: "0% 0%",
+    },
+    {
+      drawSVG: "0% 100%",
+      duration: 15,
+      ease: "power1",
+    },
+    0
+  )
+  .paused(true);
 
 /*-------------------------------------------------------------------------------------
   # ANIMATION CHAPITRE 2
@@ -229,19 +230,20 @@ timeChp3
   )
   .paused(true);
 
-timeChp2.fromTo(
-  ".progres",
-  {
-    drawSVG: "0% 0%",
-  },
-  {
-    drawSVG: "0% 100%",
-    duration: 30,
-    ease: "power1",
-  },
-  0
-)
-.paused(true);
+timeChp2
+  .fromTo(
+    ".progres",
+    {
+      drawSVG: "0% 0%",
+    },
+    {
+      drawSVG: "0% 100%",
+      duration: 30,
+      ease: "power1",
+    },
+    0
+  )
+  .paused(true);
 
 /*-------------------------------------------------------------------------------------
   # ANIMATION CHAPITRE 4
@@ -454,7 +456,10 @@ timeChp5
   .to(".c2", { y: -100 * speed, ease: "power1.in" }, 0.03)
   .to(".c3", { y: -10 * speed }, 0.05)
   .to(".peluche-tombe", { y: 9 * speed }, 0.02)
-  .to(".train-tombe", { y: 20 * speed }, 0.03);
+  .to(".train-tombe", { y: 20 * speed }, 0.03)
+  .to(".chp05", { x: 3 * speed, y: 1 * speed }, 0.03)
+  .to(".t2", { x: 1.5 * speed, y: 1 * speed }, 0.03)
+  .to(".t3", { x: 4.5 * speed, y: 1 * speed }, 0.03);
 
 gsap.to(".cube-tombe", {
   rotate: 360,
