@@ -10,9 +10,10 @@ Page Speed Insights - Rapport du 12 mai 2024, 12:52:00.
 
 ### Action concrète pour résoudre le problème
 
-- Réduire le poids des médias en mettant les images en lazy load
-- Mettre cet méthode dans tous les images retrouvés dans le html
+- Réduire le poids des médias en mettant les images en lazy load.
+- Mettre cet méthode dans tous les images retrouvés dans le html.
 - Donc pas tous les images s'activent en même temps.
+- Réduction du poids du srpitesheet
 
 ### Résultat
 
@@ -24,14 +25,14 @@ Page Speed Insights - Rapport du 12 mai 2024, 12:52:00.
 
 ### Action concrète pour résoudre le problème
 
-- Réduire / simplifier les fichiers javascript, css et html
-- Enlevé les codes pas nécéssaires
+- Réduire / simplifier les fichiers javascript, css et html.
+- Enlevé les codes pas nécéssaires.
 - Ex.: les fonts pas utilisés, les bordures sur tous les éléments,...
 
 ### Résultat
 
 - Le problème n'est plus critique à la performance du site.
-- La performance s'améliorer.
+- La performance s'est amélioré.
 
 ## Problème #3
 
@@ -39,8 +40,8 @@ Page Speed Insights - Rapport du 12 mai 2024, 12:52:00.
 
 ### Action concrète pour résoudre le problème
 
-- Enlevé complètement les commentaires et code inutiles
-- enlevé les markers: false
+- Enlevé complètement les commentaires et code inutiles.
+- enlevé les markers: false.
 
 ### Résultat
 
@@ -50,4 +51,4 @@ Page Speed Insights - Rapport du 12 mai 2024, 12:52:00.
 
 [PageSpeed Insights](https://pagespeed.web.dev/analysis/https-kristy-tim-momo-com/glwlcbwxoa?form_factor=desktop)
 
-Page Speed Insights - Report from May 12, 2024, 4:35:14 PM.
+Page Speed Insights - Report from May 12, 2024, 6:17:15 PM
