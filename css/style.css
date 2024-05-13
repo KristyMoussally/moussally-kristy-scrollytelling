@@ -48,11 +48,7 @@ span {
   font-size: 3vw;
   font-family: var(--handy);
 }
-ul,
-li {
-  display: none;
-  opacity: 0;
-}
+
 ul.technique-gsap {
   background: rgba(0, 0, 0, 0.3);
   color: white;

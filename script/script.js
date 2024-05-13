@@ -1,9 +1,14 @@
 document.addEventListener("DOMContentLoaded", (o) => {
-  gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
+  gsap.registerPlugin(
+    MotionPathPlugin,
+    MorphSVGPlugin,
+    DrawSVGPlugin,
+    ScrollTrigger
+  );
 }),
   gsap
     .timeline()
-    .to("#circle", {})
+    .to("#circle", { morphSVG: "#fleche", duration: 1.5 })
     .fromTo("#circle", { y: 10 }, { y: 30, repeat: -1, yoyo: !0 });
 let animYeux = document.querySelector(".debut"),
   animGhost = document.querySelector("#ghost"),
@@ -89,7 +94,16 @@ timeChp1.pause(),
     )
     .paused(!0),
   timeChp1
-    .fromTo(".progres", {}, { duration: 15, ease: "power1" }, 0)
+    .fromTo(
+      ".progres",
+      { drawSVG: "0% 0%" },
+      {
+        drawSVG: "0% 100%",
+        duration: 15,
+        ease: "power1",
+      },
+      0
+    )
     .paused(!0);
 const timeChp2 = gsap.timeline({
   scrollTrigger: {
@@ -177,7 +191,12 @@ timeChp3.pause(),
     )
     .paused(!0),
   timeChp2
-    .fromTo(".progres", {}, { duration: 30, ease: "power1" }, 0)
+    .fromTo(
+      ".progres",
+      { drawSVG: "0% 0%" },
+      { drawSVG: "0% 100%", duration: 30, ease: "power1" },
+      0
+    )
     .paused(!0);
 const timeChp4 = gsap.timeline({
   scrollTrigger: {
@@ -265,7 +284,12 @@ gsap.to(".train-jouet", {
     )
     .paused(!0),
   timeChp4_5
-    .fromTo(".progres", {}, { duration: 15, ease: "power1" }, 0)
+    .fromTo(
+      ".progres",
+      { drawSVG: "0% 0%" },
+      { drawSVG: "0% 100%", duration: 15, ease: "power1" },
+      0
+    )
     .paused(!0);
 const speed = 100,
   timeChp5 = gsap.timeline({
@@ -345,8 +369,16 @@ timeChp5_5
   .fromTo(".mere-lit", { opacity: 0 }, { opacity: "100%", duration: 1 })
   .to(".fille-devoir", { opacity: 0, duration: 2, display: "none" }, 10)
   .to(".fille-livre", { opacity: 0, duration: 2, display: "none" }, 10)
-  .fromTo(".dessin-corps", {}, { duration: 1 })
-  .fromTo(".dessin-trait", {}, { duration: 1 })
+  .fromTo(
+    ".dessin-corps",
+    { drawSVG: "0% 0%" },
+    { drawSVG: "0% 100%", duration: 1 }
+  )
+  .fromTo(
+    ".dessin-trait",
+    { drawSVG: "0% 0%" },
+    { drawSVG: "0% 100%", duration: 1 }
+  )
   .to(".fille-chante", { opacity: 0, display: "none", duration: 2 }, 10)
   .to(".mere-lit", { opacity: 0, display: "none", duration: 2 }, 10)
   .fromTo(
@@ -357,7 +389,12 @@ timeChp5_5
   )
   .paused(!0),
   timeChp5_5
-    .fromTo(".progres", {}, { duration: 15, ease: "power1" }, 0)
+    .fromTo(
+      ".progres",
+      { drawSVG: "0% 0%" },
+      { drawSVG: "0% 100%", duration: 15, ease: "power1" },
+      0
+    )
     .paused(!0),
   gsap.fromTo(
     ".note-musique",
@@ -425,7 +462,12 @@ timeChp8.pause(),
     .to(".reunion", { opacity: 0, duration: 3 }, 20)
     .paused(!0),
   timeChp8
-    .fromTo(".progres-black", {}, { duration: 25, ease: "power1" }, 0)
+    .fromTo(
+      ".progres-black",
+      { drawSVG: "0% 0%" },
+      { drawSVG: "0% 100%", duration: 25, ease: "power1" },
+      0
+    )
     .paused(!0);
 const speedElement = 100,
   timeChp9 = gsap.timeline({
