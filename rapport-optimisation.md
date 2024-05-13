@@ -18,6 +18,7 @@ Page Speed Insights - Rapport du 12 mai 2024, 12:52:00.
 ### Résultat
 
 - Le solution a réduit un peu le problème, mais il est moins critique que la dernière fois.
+- La réduction du poids des srpitesheet à améliorer le chargement du contenue des médias (ils ont moins de steps et moins long)
 
 ## Problème #2
 
@@ -51,4 +52,4 @@ Page Speed Insights - Rapport du 12 mai 2024, 12:52:00.
 
 [PageSpeed Insights](https://pagespeed.web.dev/analysis/https-kristy-tim-momo-com/glwlcbwxoa?form_factor=desktop)
 
-Page Speed Insights - Report from May 12, 2024, 6:17:15 PM
+Page Speed Insights - Report from May 12, 2024, 10:29:37 PM
